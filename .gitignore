@@ -1,0 +1,5 @@
+# Ignore cache module
+config/__pycache__
+
+# Ignore API Credentials
+config/lh_access.py
