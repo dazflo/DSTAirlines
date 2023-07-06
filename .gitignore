@@ -6,3 +6,6 @@ config/lh_access.py
 
 # Ignore log files
 logs
+
+# Ignore files, at least for now
+files
