@@ -1,8 +1,10 @@
 import requests
+import json
 import logging
 import sys
 sys.path.append('config')
 import lh_access as API
+
 
 
 
@@ -30,7 +32,7 @@ def get(url):
         req = requests.get(url, headers=headers, timeout=timeout)
         if req.status_code == 200:
             logger.info(f"{req.status_code} {url}")
-            return req.json()
+            return json.dumps(req.json(), indent=2)
         else:
             logger.error(f"{req.status_code} {url}")
             logger.error(f"{req.text}")
