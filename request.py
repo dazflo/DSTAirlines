@@ -18,6 +18,7 @@ logger.addHandler(file_handler)
 
 
 headers = {"Authorization": API.BEARER}
+timeout = 60
 
 
 def get(url):
@@ -26,7 +27,7 @@ def get(url):
     return data as json variable
     """
     try:
-        req = requests.get(url, headers=headers)
+        req = requests.get(url, headers=headers, timeout=timeout)
         if req.status_code == 200:
             logger.info(f"{req.status_code} {url}")
             return req.json()
