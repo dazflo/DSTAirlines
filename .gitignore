@@ -3,3 +3,6 @@ config/__pycache__
 
 # Ignore API Credentials
 config/lh_access.py
+
+# Ignore log files
+logs
