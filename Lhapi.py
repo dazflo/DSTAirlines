@@ -18,7 +18,7 @@ class Lhapi:
         if not auth_data['token']:
             headers = {'content-type': 'application/x-www-form-urlencoded'}
             payload = {'client_id': auth_data['ID'], 'client_secret': auth_data['secret'], 'grant_type': 'client_credentials'}
-            req = requests.post(f'{url}/oauth/token', headers=headers, data=payload)
+            req = requests.post(f'{cls.lh_api_url}/oauth/token', headers=headers, data=payload)
         return
     
     def __init__(self):
