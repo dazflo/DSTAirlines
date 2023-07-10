@@ -91,3 +91,14 @@ class Lhapi:
                 # logger.error(f"Error when reaching {url} : {e}")
                 print(f"Error when reaching {url} : {e}")
         return
+
+    def request_file(self, filename, uri, limit=100):
+        """
+        Call request_api
+        Execute request and get json object
+        Create a json file in files folder
+        """
+        content = self.request_api(uri, limit)
+        with open("files/" + filename, 'w') as file:
+            file.write(content)
+
