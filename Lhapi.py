@@ -44,7 +44,7 @@ class Lhapi:
             else:
                 expiration_date = datetime.min
             if date_now < expiration_date:
-                return
+                return auth_data.get('token').get('value')
 
         # If token does not exists or expired, create a new one
         headers = {'content-type': 'application/x-www-form-urlencoded'}
@@ -65,16 +65,18 @@ class Lhapi:
         else:
             print(f"Error when requesting token: {req.status_code}")
         
+        return auth_data['token']['value']
+        
 
 
 
-    def request_api(self, uri):
+    def request_api(self, uri, limit=100):
         """
         Execute request and get json object
         return data as json
         """
-        url = self.lh_api_url + uri
-        headers = {"Authorization: Bearer " + self.token}
+        url = f"{self.lh_api_url}{uri}?limit={limit}"
+        headers = {"Authorization": "Bearer " + self.token}
         timeout = 60
         try:
             req = requests.get(url, headers=headers, timeout=timeout)
