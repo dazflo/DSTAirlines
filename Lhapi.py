@@ -1,7 +1,20 @@
 from datetime import datetime, timedelta
 import json
+import logging
 import os
 import requests
+
+
+
+# Initiate logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
+
+file_handler = logging.handlers.TimedRotatingFileHandler('logs/lh_requests.log', when='midnight', interval=1, backupCount=7)
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
 class Lhapi:
@@ -25,14 +38,14 @@ class Lhapi:
 
         # Check if file exists
         if not os.path.exists(access_path):
-            print(f"{access_path} not found, check it")
+            logger.error(f"{access_path} not found, check it")
             return
         # Check if file is not empty
         try:
             with open(access_path, 'r') as access:
                 auth_data = json.load(access)
         except json.JSONDecodeError:
-            print(f"{access_path} looks empty, check it")
+            logging.error(f"{access_path} looks empty, check it")
             return
 
         # Check if token expired
@@ -63,7 +76,7 @@ class Lhapi:
             with open(access_path, 'w') as access:
                 json.dump(auth_data, access, indent=2)
         else:
-            print(f"Error when requesting token: {req.status_code}")
+            logging.error(f"Error when requesting token: {req.status_code}")
         
         return auth_data['token']['value']
         
@@ -81,15 +94,13 @@ class Lhapi:
         try:
             req = requests.get(url, headers=headers, timeout=timeout)
             if req.status_code == 200:
-                # logger.info(f"{req.status_code} {url}")
+                logger.info(f"{req.status_code} {url}")
                 return json.dumps(req.json(), indent=2)
             else:
-                print(f"{req.status_code} {url}")
-                # logger.error(f"{req.status_code} {url}")
-                # logger.error(f"{req.text}")
+                logger.error(f"{req.status_code} {url}")
+                logger.error(f"{req.text}")
         except Exception as e:
-                # logger.error(f"Error when reaching {url} : {e}")
-                print(f"Error when reaching {url} : {e}")
+                logger.error(f"Error when reaching {url} : {e}")
         return
 
     def request_file(self, filename, uri, limit=100):
