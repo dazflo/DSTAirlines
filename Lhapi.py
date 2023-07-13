@@ -19,7 +19,7 @@ logger.addHandler(file_handler)
 
 class Lhapi:
 
-    lh_api_url = "https://api.lufthansa.com/v1"
+    lh_api_url = "https://api.lufthansa.com/"
 
     def __init__(self):
         self.token = Lhapi.get_token()
@@ -83,12 +83,12 @@ class Lhapi:
 
 
 
-    def request_api(self, uri, limit=100):
+    def request_api(self, api_version, uri, limit=100):
         """
         Execute request and get json object
         return data as json
         """
-        url = f"{self.lh_api_url}{uri}?limit={limit}"
+        url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
         headers = {"Authorization": "Bearer " + self.token}
         timeout = 60
         try:
@@ -103,13 +103,13 @@ class Lhapi:
                 logger.error(f"Error when reaching {url} : {e}")
         return
 
-    def request_file(self, filename, uri, limit=100):
+    def request_file(self, filename, api_version, uri, limit=100):
         """
         Call request_api
         Execute request and get json object
         Create a json file in files folder
         """
-        content = self.request_api(uri, limit)
+        content = self.request_api(api_version, uri, limit)
         with open("files/" + filename, 'w') as file:
             file.write(content)
 
