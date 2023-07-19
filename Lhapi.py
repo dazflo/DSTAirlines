@@ -115,6 +115,7 @@ class Lhapi:
     
 
     def get_partner_token(self):
+        access_path = "config/lh_api_access.json"
         try:
             with open(access_path, 'r') as access:
                 auth_data = json.load(access)
