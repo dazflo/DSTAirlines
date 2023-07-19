@@ -57,7 +57,10 @@ class Lhapi:
             else:
                 expiration_date = datetime.min
             if date_now < expiration_date:
+                logger.info("Date du token OK")
                 return auth_data.get('token').get('value')
+            else:
+                logger.info("Date du token NOOK")
 
         # If token does not exists or expired, create a new one
         headers = {'content-type': 'application/x-www-form-urlencoded'}
@@ -66,8 +69,10 @@ class Lhapi:
             'client_secret': auth_data['secret'],
             'grant_type': 'client_credentials'
         }
-        req = requests.post(f'{cls.lh_api_url}/oauth/token', headers=headers, data=payload)
+        url = f'{cls.lh_api_url}v1/oauth/token'
+        req = requests.post(url, headers=headers, data=payload)
         if req.status_code == 200:
+            logger.info(f"token request 200 {url}")
             req = req.json()
             auth_data['token'] = {
                 'value': req['access_token'],
@@ -76,7 +81,7 @@ class Lhapi:
             with open(access_path, 'w') as access:
                 json.dump(auth_data, access, indent=2)
         else:
-            logging.error(f"Error when requesting token: {req.status_code}")
+            logging.error(f"Error when requesting token: {req.status_code} {url}")
         
         return auth_data['token']['value']
         
@@ -88,7 +93,8 @@ class Lhapi:
         Execute request and get json object
         return data as json
         """
-        url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
+        # url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
+        url = f"{self.lh_api_url}{api_version}{uri}"
         headers = {"Authorization": "Bearer " + self.token}
         timeout = 60
         try:
