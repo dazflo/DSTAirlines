@@ -114,26 +114,27 @@ class Lhapi:
             file.write(content)
     
 
-    def get_partner_token(self):
-        access_path = "config/lh_api_access.json"
-        try:
-            with open(access_path, 'r') as access:
-                auth_data = json.load(access)
-        except json.JSONDecodeError:
-            logging.error(f"{access_path} looks empty, check it")
-            return
+    # def get_partner_token(self):
+    #     access_path = "config/lh_api_access.json"
+    #     try:
+    #         with open(access_path, 'r') as access:
+    #             auth_data = json.load(access)
+    #     except json.JSONDecodeError:
+    #         logging.error(f"{access_path} looks empty, check it")
+    #         return
         
-        headers = {'content-type': 'application/x-www-form-urlencoded'}
-        payload = {
-            'client_id': auth_data['ID'],
-            'client_secret': auth_data['secret'],
-            'grant_type': 'client_credentials'
-        }
+    #     headers = {'content-type': 'application/x-www-form-urlencoded'}
+    #     payload = {
+    #         'client_id': auth_data['ID'],
+    #         'client_secret': auth_data['secret'],
+    #         'grant_type': 'client_credentials'
+    #     }
 
-        req = requests.post(f'{self.lh_api_url}/v1/partners/oauth/token', headers=headers, data=payload)
+    #     url = f'{self.lh_api_url}v1/partners/oauth/token'
+    #     req = requests.post(url, headers=headers, data=payload)
 
-        if req.status_code == 200:
-            req = req.json()
-            print(req)
-        else:
-            logging.error(f"Error when requesting token: {req.status_code}")
+    #     if req.status_code == 200:
+    #         req = req.json()
+    #         print(req)
+    #     else:
+    #         logging.error(f"Error when requesting token: {req.status_code} {url}")
