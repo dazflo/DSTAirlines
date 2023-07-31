@@ -7,7 +7,7 @@ config/lh_access.py
 config/lh_api_access.json
 
 # Ignore log files
-logs
+logs/*
 
 # Ignore files, at least for now
 files
