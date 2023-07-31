@@ -21,17 +21,15 @@ class Lhapi:
 
     lh_api_url = "https://api.lufthansa.com/"
 
-    def __init__(self):
-        self.token = Lhapi.get_token()
-        # self.uri = uri
-        # self.output_file = output_file
+    def __init__(self, proxies=''):
+        self.proxies = proxies
+        self.token = self.__get_token()
+
 
     
-
-    @classmethod
-    def get_token(cls):
+    def __get_token(self):
         """
-        Class method used to retrieve authentication token and check its validity.
+        Private method used to retrieve authentication token and check its validity.
         Source: https://developer.lufthansa.com/docs/read/api_basics/Getting_Started
         """
         access_path = "config/lh_api_access.json"
@@ -69,8 +67,8 @@ class Lhapi:
             'client_secret': auth_data['secret'],
             'grant_type': 'client_credentials'
         }
-        url = f'{cls.lh_api_url}v1/oauth/token'
-        req = requests.post(url, headers=headers, data=payload)
+        url = f'{Lhapi.lh_api_url}v1/oauth/token'
+        req = requests.post(url, headers=headers, data=payload, proxies=self.proxies)
         if req.status_code == 200:
             logger.info(f"token request 200 {url}")
             req = req.json()
@@ -84,7 +82,6 @@ class Lhapi:
             logging.error(f"Error when requesting token: {req.status_code} {url}")
         
         return auth_data['token']['value']
-        
 
 
 
@@ -98,7 +95,7 @@ class Lhapi:
         headers = {"Authorization": "Bearer " + self.token}
         timeout = 60
         try:
-            req = requests.get(url, headers=headers, timeout=timeout)
+            req = requests.get(url, headers=headers, timeout=timeout, proxies=self.proxies)
             if req.status_code == 200:
                 logger.info(f"{req.status_code} {url}")
                 return json.dumps(req.json(), indent=2)
@@ -108,6 +105,8 @@ class Lhapi:
         except Exception as e:
                 logger.error(f"Error when reaching {url} : {e}")
         return
+
+
 
     def request_file(self, filename, api_version, uri, limit=100):
         """

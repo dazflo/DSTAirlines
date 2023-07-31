@@ -10,4 +10,4 @@ config/lh_api_access.json
 logs/*
 
 # Ignore files, at least for now
-files
+files/*
