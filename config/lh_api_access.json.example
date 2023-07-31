@@ -1,4 +1,8 @@
 {
-  "ID": "your_api_id",
-  "secret": "your_api_secret"
+  "ID": "<your_api_id>",
+  "secret": "<your_api_secret>"
+  "proxies": {
+    "http": "http://<proxy_url>:<port>",
+    "https:": "https://<proxy_url>:<port>"
+  }
 }
