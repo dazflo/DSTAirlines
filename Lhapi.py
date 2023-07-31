@@ -90,8 +90,7 @@ class Lhapi:
             'grant_type': 'client_credentials'
         }
         url = f'{Lhapi.lh_api_url}v1/oauth/token'
-        print(url, headers, payload)
-        req = requests.post(url, headers=headers, data=payload)
+        req = requests.post(url, headers=headers, data=payload, proxies=conf['proxies'])
         if req.status_code == 200:
             logger.info(f"token request 200 {url}")
             req = req.json()
