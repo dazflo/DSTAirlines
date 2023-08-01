@@ -122,8 +122,7 @@ class Lhapi:
             req = requests.get(url, headers=headers, timeout=timeout, proxies=self.config['proxies'])
             if req.status_code == 200:
                 logger.info(f"{req.status_code} {url}")
-                # return json.dumps(req.json(), indent=2)
-                return req.text
+                return json.dumps(req.json(), indent=2)
             else:
                 logger.error(f"{req.status_code} {url}")
                 logger.error(f"{req.text}")
@@ -146,9 +145,10 @@ class Lhapi:
         # Attention il semble que l'offset génère 1 doublon à chaque fois
         while True:
             content = self.request_api(api_version, uri)
+
             with open("files/" + filename, 'w') as file:
                 file.write(content)
-            print(content)
+
             next_link = None
             pattern = r'{"@Href":.*,"@Rel":"next"}'
             match = re.search(pattern, content)
