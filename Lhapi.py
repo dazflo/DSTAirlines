@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 import json
 import logging
 import os
+import re
 import requests
 
 
@@ -105,38 +106,65 @@ class Lhapi:
 
 
 
-    # def request_api(self, api_version, uri, limit=100):
-    #     """
-    #     Execute request and get json object
-    #     return data as json
-    #     """
-    #     # url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
-    #     url = f"{self.lh_api_url}{api_version}{uri}"
-    #     headers = {"Authorization": "Bearer " + self.token}
-    #     timeout = 60
-    #     try:
-    #         req = requests.get(url, headers=headers, timeout=timeout, proxies=self.proxies)
-    #         if req.status_code == 200:
-    #             logger.info(f"{req.status_code} {url}")
-    #             return json.dumps(req.json(), indent=2)
-    #         else:
-    #             logger.error(f"{req.status_code} {url}")
-    #             logger.error(f"{req.text}")
-    #     except Exception as e:
-    #             logger.error(f"Error when reaching {url} : {e}")
-    #     return
+    def request_api(self, api_version, uri):
+        """
+        Execute request and get json object
+        return data as json
+        """
+        # Jour avec les liens "@Href" lorsque "@Rel": "next" existe et concaténer le résultat (option full)
+        # url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
+        # next = True
+        # while next:
+        url = f"{self.lh_api_url}{api_version}{uri}"
+        headers = {"Authorization": "Bearer " + self.config['token']['value']}
+        timeout = 60
+        try:
+            req = requests.get(url, headers=headers, timeout=timeout, proxies=self.config['proxies'])
+            if req.status_code == 200:
+                logger.info(f"{req.status_code} {url}")
+                # return json.dumps(req.json(), indent=2)
+                return req.text
+            else:
+                logger.error(f"{req.status_code} {url}")
+                logger.error(f"{req.text}")
+        except Exception as e:
+                logger.error(f"Error when reaching {url} : {e}")
+        return
 
 
 
-    # def request_file(self, filename, api_version, uri, limit=100):
-    #     """
-    #     Call request_api
-    #     Execute request and get json object
-    #     Create a json file in files folder
-    #     """
-    #     content = self.request_api(api_version, uri, limit)
-    #     with open("files/" + filename, 'w') as file:
-    #         file.write(content)
+    # pattern = r'"@Href": "([^"]+)",\s+"@Rel": "next"'
+
+
+
+    def request_file(self, filename, api_version, uri, element_name, full=False, count=None):
+        """
+        Call request_api
+        Execute request and get json object
+        Create a json file in files folder
+        """
+        # Attention il semble que l'offset génère 1 doublon à chaque fois
+        while True:
+            content = self.request_api(api_version, uri)
+            with open("files/" + filename, 'w') as file:
+                file.write(content)
+            print(content)
+            next_link = None
+            pattern = r'{"@Href":.*,"@Rel":"next"}'
+            match = re.search(pattern, content)
+            if match:
+                res = '[' + match.group() +']'
+                res = json.loads(res)
+                for meta in res:
+                    if meta["@Rel"] == "next":
+                        next_link = meta['@Href']
+            if full and next_link:
+                uri = next_link.split(Lhapi.lh_api_url + api_version)[-1]
+                self.request_file(filename, api_version, uri, element_name, full=False)
+
+            else:
+                break
+
     
 
     # def get_partner_token(self):
