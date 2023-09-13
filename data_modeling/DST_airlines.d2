@@ -37,9 +37,15 @@ DST Airlines: {
         equipCode: varchar
     }
 
+    airlines: {
+        shape: sql_table
+        airlineID: varchar {constraint: primary_key}
+        AirlineID_ICAO: varchar
+        name: varchar
+    }
+
     countries.cityCode -> cities.cityCode: 1,n
     countries.languageCode -> languages.languageCode: n,n
     airports.cityCode -> cities.cityCode: 1,n
 
-  
 }
