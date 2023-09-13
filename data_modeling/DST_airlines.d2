@@ -1,0 +1,45 @@
+DST Airlines: {
+
+    countries: {
+        shape: sql_table
+        countryCode: varchar {constraint: primary_key}
+        name: varchar
+        languageCode: varchar {constraint: foreign_key}
+    }
+
+    cities: {
+        shape: sql_table
+        cityCode: varchar {constraint: primary_key}
+        name: varchar
+        utcOffset: varchar
+        timeZoneId: varchar
+        countryCode: varchar {constraint: foreign_key}
+        airportCode: varchar {constraint: foreign_key}
+    }
+
+    languages: {
+        shape: sql_table
+        languageCode: varchar {constraint: primary_key}
+        name: varchar
+    }
+
+    airports: {
+        shape: sql_table
+        airportCode: varchar {constraint: primary_key}
+        cityCode: varchar {constraint: foreign_key}
+        cordinates: geometry
+    }
+
+    aircrafts: {
+        shape: sql_table
+        aircraftCode: varchar {constraint: primary_key}
+        name: varchar
+        equipCode: varchar
+    }
+
+    countries.cityCode -> cities.cityCode: 1,n
+    countries.languageCode -> languages.languageCode: n,n
+    airports.cityCode -> cities.cityCode: 1,n
+
+  
+}
