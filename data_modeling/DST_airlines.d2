@@ -2,50 +2,114 @@ DST Airlines: {
 
     countries: {
         shape: sql_table
-        countryCode: varchar {constraint: primary_key}
+        style: {fill: blue}
+        id_country: integer {constraint: [primary_key; foreign_key]}
+        countryCode: varchar 
         name: varchar
-        languageCode: varchar {constraint: foreign_key}
+        languageCode: varchar
     }
 
     cities: {
         shape: sql_table
-        cityCode: varchar {constraint: primary_key}
+        style: {fill: blue}
+        id_city: integer {constraint: [primary_key; foreign_key]}
+        cityCode: varchar
         name: varchar
         utcOffset: varchar
         timeZoneId: varchar
-        countryCode: varchar {constraint: foreign_key}
-        airportCode: varchar {constraint: foreign_key}
+        countryCode: varchar
+        airportCode: varchar
     }
 
     languages: {
         shape: sql_table
-        languageCode: varchar {constraint: primary_key}
+        style: {fill: blue}
+        id_language: integer {constraint: [primary_key; foreign_key]}
+        languageCode: varchar
         name: varchar
     }
 
     airports: {
         shape: sql_table
-        airportCode: varchar {constraint: primary_key}
-        cityCode: varchar {constraint: foreign_key}
+        style: {fill: blue}
+        id_airport: integer {constraint: [primary_key; foreign_key]}
+        airportCode: varchar 
+        cityCode: varchar
         cordinates: geometry
     }
 
     aircrafts: {
         shape: sql_table
-        aircraftCode: varchar {constraint: primary_key}
+        style: {fill: blue}
+        id_aircraft: integer {constraint: [primary_key; foreign_key]}
+        aircraftCode: varchar
         name: varchar
         equipCode: varchar
     }
 
     airlines: {
         shape: sql_table
-        airlineID: varchar {constraint: primary_key}
+        style: {fill: blue}
+        id_airline: integer {constraint: [primary_key; foreign_key]}
+        airlineID: varchar 
         AirlineID_ICAO: varchar
         name: varchar
     }
 
-    countries.cityCode -> cities.cityCode: 1,n
-    countries.languageCode -> languages.languageCode: n,n
-    airports.cityCode -> cities.cityCode: 1,n
+    flight_schedules: {
+        shape: sql_table
+        style: {fill: green}
+        id_flight_schedules: integer {constraint: [primary_key; foreign_key]}
+        duration: varchar
+        departure_airportCode: varchar
+        departure_scheduledTimeLocal_Datetime: datetime
+        arrival_airportCode: varchar
+        arrival_scheduledTimeLocal_Datetime: datetime
+        marketingCarrier_airlineID: varchar
+        flightNumber: integer
+        operatingCarrier_airlineID: varchar
+        equipment_aircraftCode: integer
+        details_stops_stopQuantity: integer
+        details_daysOfOperation: integer
+    }
+
+    generic_fact_table: {
+        shape: sql_table
+        style: {fill: black}
+        id_fact_table: integer {constraint: primary_key} 
+        id_country: integer
+        id_city: integer
+        id_language: integer
+        id_airport: integer
+        id_aircraft: integer
+        id_airline: integer
+        id_flight_schedules: integer
+        measure_1: float
+        measure_2: float
+        measure_3: float
+        Measure_4: float
+    }
+
+    fact_table_flights_countries: {
+        shape: sql_table
+        style: {fill: black}
+        id_fact_table_flights_countries: integer {constraint: primary_key}
+        id_country: integer
+        id_flight_schedules: integer
+        number_of_flights: integer
+        flight_duration: float
+        number_of_stops: integer
+
+    }
+
+    countries.id_country -> generic_fact_table.id_country: 1,n
+    countries.id_country -> fact_table_flights_countries.id_country: 1,n
+    cities.id_city -> generic_fact_table.id_city: 1,n
+    languages.id_language -> generic_fact_table.id_language: 1,n
+    airports.id_airport -> generic_fact_table.id_airport: 1,n
+    aircrafts.id_aircraft -> generic_fact_table.id_aircraft: 1,n
+    airlines.id_airline -> generic_fact_table.id_airline: 1,n
+    flight_schedules.id_flight_schedules -> generic_fact_table.id_flight_schedules: 1,n
+    flight_schedules.id_flight_schedules -> fact_table_flights_countries.id_flight_schedules: 1,n
 
 }
