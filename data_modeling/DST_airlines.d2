@@ -1,113 +1,209 @@
 DST Airlines: {
+  countries: {
+    shape: sql_table
+    style: {fill: purple}
+    id_country: integer {constraint: primary_key}
+    country_code: varchar
+    country_name: varchar
+  }
 
-    countries: {
-        shape: sql_table
-        style: {fill: blue}
-        id_country: integer {constraint: primary_key}
-        country_code: varchar 
-        country_name: varchar
-    }
+  timezones: {
+    shape: sql_table
+    style: {fill: purple}
+    id_timezone: integer {constraint: primary_key}
+    utc_offset: float
+    name: varchar
+  }
 
-    cities: {
-        shape: sql_table
-        style: {fill: blue}
-        id_city: integer {constraint: primary_key}
-        city_code: varchar
-        city_name: varchar
-        id_timezone: integer {constraint: foreign_key}
-        id_country: integer {constraint: foreign_key}
-        id_airport: integer {constraint: foreign_key}
-    }
+  cities: {
+    shape: sql_table
+    style: {fill: blue}
+    id_city: integer {constraint: primary_key}
+    city_code: varchar
+    city_name: varchar
+    id_timezone: integer {constraint: foreign_key}
+    id_country: integer {constraint: foreign_key}
+  }
 
-    timezones: {
-        shape: sql_table
-        style: {fill: blue}
-        id_timezone: integer {constraint: primary_key}
-        utc_offset: float
-    }
+  airports: {
+    shape: sql_table
+    style: {fill: blue}
+    id_airport: integer {constraint: primary_key}
+    airport_code: varchar
+    coordinates: geometry
+    id_city: integer {constraint: foreign_key}
+  }
 
-    airports: {
-        shape: sql_table
-        style: {fill: blue}
-        id_airport: integer {constraint: primary_key}
-        airport_code: varchar 
-        id_city: integer {constraint: foreign_key}
-        coordinates: geometry
-    }
+  aircrafts: {
+    shape: sql_table
+    style: {fill: blue}
+    id_aircraft: integer {constraint: primary_key}
+    aircraft_code: varchar
+    name: varchar
+    id_equipement: integer {constraint: foreign_key}
+  }
 
-    aircrafts: {
-        shape: sql_table
-        style: {fill: blue}
-        id_aircraft: integer {constraint: primary_key}
-        aircraft_code: varchar
-        name: varchar
-        equip_code: varchar
-    }
+  airlines: {
+    shape: sql_table
+    style: {fill: blue}
+    id_airline: integer {constraint: primary_key}
+    airlineID: varchar
+    AirlineID_ICAO: varchar
+    name: varchar
+  }
 
-    airlines: {
-        shape: sql_table
-        style: {fill: blue}
-        id_airline: integer {constraint: primary_key}
-        airlineID: varchar 
-        AirlineID_ICAO: varchar
-        name: varchar
-    }
+  flight_schedules: {
+    shape: sql_table
+    style: {fill: green}
+    id_flight_schedules: integer {constraint: primary_key}
+    duration: varchar
+    departure_airportCode: varchar
+    departure_scheduledTimeLocal_Datetime: datetime
+    arrival_airportCode: varchar
+    arrival_scheduledTimeLocal_Datetime: datetime
+    marketingCarrier_airlineID: varchar
+    flightNumber: integer
+    operatingCarrier_airlineID: varchar
+    equipment_aircraftCode: integer
+    details_stops_stopQuantity: integer
+    details_daysOfOperation: integer
+  }
+  
+  time: {
+    shape: sql_table
+    style: {fill: violet}
+    id_time: integer {constraint: primary_key}
+    date: datetime
+    year: integer
+    month: integer
+    day: integer
+    hour: integer
+  }
 
-    flight_schedules: {
-        shape: sql_table
-        style: {fill: green}
-        id_flight_schedules: integer {constraint: primary_key}
-        duration: varchar
-        departure_airportCode: varchar
-        departure_scheduledTimeLocal_Datetime: datetime
-        arrival_airportCode: varchar
-        arrival_scheduledTimeLocal_Datetime: datetime
-        marketingCarrier_airlineID: varchar
-        flightNumber: integer
-        operatingCarrier_airlineID: varchar
-        equipment_aircraftCode: integer
-        details_stops_stopQuantity: integer
-        details_daysOfOperation: integer
-    }
+# 
+  lounges: {
+    shape: sql_table
+    style: {fill: violet}
+    id_lounge: integer  {constraint: primary_key}
+    location: varchar
+    opening_hours: varchar
+    id_feature: {constraint: foreign_key}
+    MagazinesAndNews: varchar # to check
+    airport_id: integer {constraint: foreign_key}
+  }
 
-    generic_fact_table: {
-        shape: sql_table
-        style: {fill: black}
-        id_fact_table: integer {constraint: primary_key} 
-        id_country: integer
-        id_city: integer
-        id_language: integer
-        id_airport: integer
-        id_aircraft: integer
-        id_airline: integer
-        id_flight_schedules: integer
-        id_timezone: integer
-        measure_1: float
-        measure_2: float
-        measure_3: float
-        Measure_4: float
-    }
+  features:{
+    shape: sql_table
+    style: {fill: violet}
+    id_feature: integer  {constraint: primary_key}
+    feature_name: varchar
+  }
 
-    fact_table_flights_countries: {
-        shape: sql_table
-        style: {fill: black}
-        id_fact_table_flights_countries: integer {constraint: primary_key}
-        id_country: integer
-        id_flight_schedules: integer
-        number_of_flights: integer
-        flight_duration: float
-        number_of_stops: integer
+  equipments: {
+    shape: sql_table
+    style: {fill: violet}
+    id_equipement: integer  {constraint: primary_key}
+    equipement_name: varchar
+  }
 
-    }
+  flight_statuses: {
+    shape: sql_table
+    style: {fill: blue}
+    id_fligth_status: integer  {constraint: primary_key}
+    name
+  }
 
-    countries.id_country -> generic_fact_table.id_country: 1,n
-    countries.id_country -> fact_table_flights_countries.id_country: 1,n
-    cities.id_city -> generic_fact_table.id_city: 1,n
-    timezones.id_timezone -> generic_fact_table.id_timezone: 1,n
-    airports.id_airport -> generic_fact_table.id_airport: 1,n
-    aircrafts.id_aircraft -> generic_fact_table.id_aircraft: 1,n
-    airlines.id_airline -> generic_fact_table.id_airline: 1,n
-    flight_schedules.id_flight_schedules -> generic_fact_table.id_flight_schedules: 1,n
-    flight_schedules.id_flight_schedules -> fact_table_flights_countries.id_flight_schedules: 1,n
 
+  timezones -> cities <- countries
+  cities -> airports <- lounges <- features
+  airports -> flight_schedules
+  time -> flight_schedules
+  aircrafts -> flight_schedules
+  airlines -> flight_schedules
+
+  equipments -> aircrafts
 }
+
+
+### TODO
+# voir pour flight / flight_status (mais lien vaec time et airports: https://developer.lufthansa.com/docs/api_details/operations/Flight_Status_Response
+# remettre les bonnes couleurs
+# remettre les attributs dans les tables de fait
+# plusieurs tables de fait = plusieurs schema ?
+# MagazinesAndNews in lounges ?
+
+# generic_fact_table: {
+#     shape: sql_table
+#     style: {fill: black}
+#     id_fact_table: integer {constraint: primary_key} 
+#     id_country: integer
+#     id_city: integer
+#     id_language: integer
+#     id_airport: integer
+#     id_aircraft: integer
+#     id_airline: integer
+#     id_flight_schedules: integer
+#     id_time: integer
+#     measure_1: float
+#     measure_2: float
+#     measure_3: float
+#     Measure_4: float
+# }
+
+# fact_table_flights_countries: {
+#     shape: sql_table
+#     style: {fill: black}
+#     id_fact_table_flights_countries: integer {constraint: primary_key}
+#     id_country: integer
+#     id_flight_schedules: integer
+#     number_of_flights: integer
+#     flight_duration: float
+#     number_of_stops: integer
+
+# }
+
+# fact_table_flights_schedules_countries: {
+#     shape: sql_table
+#     style: {fill: black}
+#     id_fact_table_flights_schedules_countries: integer {constraint: primary_key}
+#     id_country: integer
+#     id_flight_schedules: integer
+#     id_time: integer
+#     number_of_flights: integer
+#     flight_duration: float
+#     number_of_stops: integer
+#     days_of_operation: integer
+
+# }
+
+# fact_table_flight_schedules_airports: {
+#     shape: sql_table
+#     style: {fill: black}
+#     id_fact_table_flight_schedules_airports: integer {constraint: primary_key}
+#     id_airport: integer
+#     id_flight_schedules: integer
+#     id_time: integer
+#     duration: float
+#     number_of_stops: integer
+#     days_of_operation: integer
+
+# }    
+
+
+# #generic fact_table
+# countries.id_country -> generic_fact_table.id_country: 1,n    
+# cities.id_city -> generic_fact_table.id_city: 1,n
+# languages.id_language -> generic_fact_table.id_language: 1,n
+# airports.id_airport -> generic_fact_table.id_airport: 1,n
+# aircrafts.id_aircraft -> generic_fact_table.id_aircraft: 1,n
+# airlines.id_airline -> generic_fact_table.id_airline: 1,n
+# flight_schedules.id_flight_schedules -> generic_fact_table.id_flight_schedules: 1,n
+# time.id_time -> generic_fact_table.id_time: 1,n
+# #fact_table_flight_schedules_countries
+# flight_schedules.id_flight_schedules -> fact_table_flights_schedules_countries.id_flight_schedules: 1,n
+# countries.id_country -> fact_table_flights_schedules_countries.id_country: 1,n
+# time.id_time -> fact_table_flights_schedules_countries.id_time: 1,n
+# #fact_table_flight_schedules_airports
+# airports.id_airport -> fact_table_flight_schedules_airports.id_fact_table_flight_schedules_airports: 1,n
+# flight_schedules.id_flight_schedules -> fact_table_flight_schedules_airports.id_fact_table_flight_schedules_airports: 1,n
+# time.id_time -> fact_table_flight_schedules_airports.id_time: 1,n
