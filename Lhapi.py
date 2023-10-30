@@ -135,6 +135,17 @@ class Lhapi:
     # pattern = r'"@Href": "([^"]+)",\s+"@Rel": "next"'
 
 
+    def get_meta(file):
+        # Get data content as string
+        with open(file, 'r') as f:
+            data = f.read()
+
+        pattern = re.compile(r'"Meta":.*"Link":.*\].*?\}', re.DOTALL)
+
+        meta = re.findall(pattern, data)[0]
+        # Transform string resul in json
+        meta = json.loads('{' + meta + '}')
+        return meta
 
     def request_file(self, filename, api_version, uri, element_name, full=False, count=None):
         """

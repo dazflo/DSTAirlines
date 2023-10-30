@@ -1,0 +1,210 @@
+{
+  "CountryResource": {
+    "Countries": {
+      "Country": [
+        {
+          "CountryCode": "AD",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Andorra"
+            }
+          }
+        },
+        {
+          "CountryCode": "AE",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "United Arab Emirates"
+            }
+          }
+        },
+        {
+          "CountryCode": "AF",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Afghanistan"
+            }
+          }
+        },
+        {
+          "CountryCode": "AG",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Antigua And Barbuda, Leeward Islands"
+            }
+          }
+        },
+        {
+          "CountryCode": "AI",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Anguilla, Leeward Islands"
+            }
+          }
+        },
+        {
+          "CountryCode": "AL",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Albania"
+            }
+          }
+        },
+        {
+          "CountryCode": "AM",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Armenia"
+            }
+          }
+        },
+        {
+          "CountryCode": "AO",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Angola"
+            }
+          }
+        },
+        {
+          "CountryCode": "AQ",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Antarctica"
+            }
+          }
+        },
+        {
+          "CountryCode": "AR",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Argentina"
+            }
+          }
+        },
+        {
+          "CountryCode": "AS",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "American Samoa"
+            }
+          }
+        },
+        {
+          "CountryCode": "AT",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Austria"
+            }
+          }
+        },
+        {
+          "CountryCode": "AU",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Australia"
+            }
+          }
+        },
+        {
+          "CountryCode": "AW",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Aruba"
+            }
+          }
+        },
+        {
+          "CountryCode": "AZ",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Azerbaijan"
+            }
+          }
+        },
+        {
+          "CountryCode": "BA",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Bosnia And Herzegovina"
+            }
+          }
+        },
+        {
+          "CountryCode": "BB",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Barbados"
+            }
+          }
+        },
+        {
+          "CountryCode": "BD",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Bangladesh"
+            }
+          }
+        },
+        {
+          "CountryCode": "BE",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Belgium"
+            }
+          }
+        },
+        {
+          "CountryCode": "BF",
+          "Names": {
+            "Name": {
+              "@LanguageCode": "EN",
+              "$": "Burkina Faso"
+            }
+          }
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/countries?lang=EN",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/countries?lang=EN&offset=20&limit=20",
+          "@Rel": "next"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/countries?lang=EN&offset=220&limit=20",
+          "@Rel": "last"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/countries/{countryCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 238
+    }
+  }
+}
