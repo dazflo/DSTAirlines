@@ -4,6 +4,7 @@ import logging
 import os
 import re
 import requests
+import time
 
 
 
@@ -106,7 +107,7 @@ class Lhapi:
 
 
 
-    def request_api(self, api_version, uri):
+    def request_api(self, url):
         """
         Execute request and get json object
         return data as json
@@ -115,7 +116,7 @@ class Lhapi:
         # url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
         # next = True
         # while next:
-        url = f"{self.lh_api_url}{api_version}{uri}"
+        # url = f"{self.lh_api_url}{api_version}{uri}"
         headers = {"Authorization": "Bearer " + self.config['token']['value']}
         timeout = 60
         try:
@@ -128,42 +129,65 @@ class Lhapi:
                 logger.error(f"{req.text}")
         except Exception as e:
                 logger.error(f"Error when reaching {url} : {e}")
+        # 6 calls per second  1000 calls per hour
+        time.sleep(1)
         return
 
 
+    def get_meta(self, content):
+        # Get data content as string
+        # print(type(content))
+        # content = json.dumps(content)
+        pattern = re.compile(r'"Meta":.*"Link":.*\].*?\}', re.DOTALL)
 
-    # pattern = r'"@Href": "([^"]+)",\s+"@Rel": "next"'
+        meta = re.findall(pattern, content)[0]
+        # Transform string resul in json
+        meta = json.loads('{' + meta + '}')
+        return meta
+    
+
+    def get_next_link(self, meta):
+        next_link = None
+        for item in meta['Meta']['Link']:
+            if item['@Rel'] == 'next':
+                # Vous avez trouvé le dictionnaire avec '@Rel' égal à 'next'
+                next_link = item['@Href']
+                break
+        return next_link
+
+    
+
+    def request_full_files(self, url, resource_name):
+        # Attention il semble que l'offset génère 1 doublon à chaque fois
+        request_counter = 1
+        req_date = datetime.now().date().strftime("%Y-%m-%d")
+
+        while url:
+            content = self.request_api(url)
+            filename = f"{req_date}_{resource_name}_{request_counter}.json"
+            self.write_file(content, filename)
+            url = self.get_next_link(self.get_meta(content))
+            request_counter += 1
+
+        return
 
 
-
-    def request_file(self, filename, api_version, uri, element_name, full=False, count=None):
+    def request_file(self, url, filename):
         """
         Call request_api
         Execute request and get json object
         Create a json file in files folder
         """
-        # Attention il semble que l'offset génère 1 doublon à chaque fois
-        while True:
-            content = self.request_api(api_version, uri)
+        content = self.request_api(url)
+        self.write_file(content, filename)
 
-            with open("files/" + filename, 'w') as file:
-                file.write(content)
+        return
+    
 
-            next_link = None
-            pattern = r'{"@Href":.*,"@Rel":"next"}'
-            match = re.search(pattern, content)
-            if match:
-                res = '[' + match.group() +']'
-                res = json.loads(res)
-                for meta in res:
-                    if meta["@Rel"] == "next":
-                        next_link = meta['@Href']
-            if full and next_link:
-                uri = next_link.split(Lhapi.lh_api_url + api_version)[-1]
-                self.request_file(filename, api_version, uri, element_name, full=False)
-
-            else:
-                break
+    def write_file(self, content, filename):
+        with open("files/" + filename, 'w') as file:
+            file.write(content)
+        return
 
     
 
