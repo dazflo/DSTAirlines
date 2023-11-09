@@ -130,7 +130,8 @@ class Lhapi:
         except Exception as e:
                 logger.error(f"Error when reaching {url} : {e}")
         # 6 calls per second  1000 calls per hour
-        time.sleep(1)
+        finally:
+            time.sleep(1.5)
         return
 
 
