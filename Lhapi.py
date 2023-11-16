@@ -12,8 +12,10 @@ import time
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
-
-file_handler = logging.handlers.TimedRotatingFileHandler('logs/lh_requests.log', when='midnight', interval=1, backupCount=7)
+logs_dir = 'logs'
+if not os.path.exists(logs_dir):
+    os.mkdir(logs_dir)
+file_handler = logging.handlers.TimedRotatingFileHandler(os.path.join(logs_dir, 'lh_requests.log'), when='midnight', interval=1, backupCount=7)
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
@@ -28,7 +30,6 @@ class Lhapi:
         self.config = self.get_access_file()
         # self.token = self.__get_token()
         # self.proxies = self.__get_proxies()
-
 
 
     def read_access_file(self):
