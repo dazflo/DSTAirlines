@@ -79,11 +79,11 @@ class Lhapi:
             else:
                 expiration_date = datetime.min
             if date_now < expiration_date:
-                logger.info("Date du token OK")
+                logger.info("Token validity OK")
                 # return auth_data.get('token').get('value')
                 return conf
             else:
-                logger.info("Date du token NOOK")
+                logger.warning("DToken validity NOOK")
 
         # If token does not exists or expired, create a new one
         headers = {'content-type': 'application/x-www-form-urlencoded'}
@@ -107,33 +107,46 @@ class Lhapi:
         return conf
 
 
-
-    def request_api(self, url):
+    def request_api(self, url, retry=0):
         """
         Execute request and get json object
         return data as json
         """
-        # Jour avec les liens "@Href" lorsque "@Rel": "next" existe et concaténer le résultat (option full)
-        # url = f"{self.lh_api_url}{api_version}{uri}?limit={limit}"
-        # next = True
-        # while next:
-        # url = f"{self.lh_api_url}{api_version}{uri}"
         headers = {"Authorization": "Bearer " + self.config['token']['value']}
         timeout = 60
         try:
             req = requests.get(url, headers=headers, timeout=timeout, proxies=self.config['proxies'])
-            if req.status_code == 200:
-                logger.info(f"{req.status_code} {url}")
-                return json.dumps(req.json(), indent=2)
-            else:
-                logger.error(f"{req.status_code} {url}")
-                logger.error(f"{req.text}")
+            req.raise_for_status()
+            logger.info(f"{req.status_code} {url}")
         except Exception as e:
                 logger.error(f"Error when reaching {url} : {e}")
-        # 6 calls per second  1000 calls per hour
+                logger.error(f"{req.status_code} {url}")
+                logger.error(f"{req.text}")
+                # to counter: The service being accessed is overloaded. Restricted access only
+                if retry <= 6:
+                    time.sleep(10)
+                    retry += 1
+                else:
+                    raise Exception(f"Error {req.status_code} when requesting {url} with {retry} retries")
+                return self.request_api(url, retry)
+        else:
+            return json.dumps(req.json(), indent=2)
         finally:
-            time.sleep(1.5)
+            time.sleep(1)
         return
+
+
+    def gen_dates_range(self, start_date, end_date):
+        start_date = datetime.strptime(start_date, "%d%b%y")
+        end_date = datetime.strptime(end_date, "%d%b%y")
+
+        date_range = []
+ 
+        # Génération des dates entre les deux dates en entrées
+        while start_date <= end_date:
+            date_range.append(start_date.strftime('%d%b%y').upper())
+            start_date += timedelta(days=1)
+        return date_range
 
 
     def get_meta(self, content):
@@ -141,26 +154,28 @@ class Lhapi:
         # print(type(content))
         # content = json.dumps(content)
         pattern = re.compile(r'"Meta":.*"Link":.*\].*?\}', re.DOTALL)
-
-        meta = re.findall(pattern, content)[0]
-        # Transform string resul in json
-        meta = json.loads('{' + meta + '}')
+        meta = re.findall(pattern, content)
+        # Transform string result in json
+        if meta:
+            meta = meta[0]
+            meta = json.loads('{' + meta + '}')
         return meta
     
 
     def get_next_link(self, meta):
         next_link = None
-        for item in meta['Meta']['Link']:
-            if item['@Rel'] == 'next':
-                # Vous avez trouvé le dictionnaire avec '@Rel' égal à 'next'
-                next_link = item['@Href']
-                break
+        if meta:
+            for item in meta['Meta']['Link']:
+                if item['@Rel'] == 'next':
+                    # Vous avez trouvé le dictionnaire avec '@Rel' égal à 'next'
+                    next_link = item['@Href']
+                    break
         return next_link
 
     
 
     def request_full_files(self, url, resource_name):
-        # Attention il semble que l'offset génère 1 doublon à chaque fois
+        # Attention il semble que l'offset génère 1 doublon à chaque fois, à vérifier
         request_counter = 1
         req_date = datetime.now().date().strftime("%Y-%m-%d")
 
@@ -187,9 +202,12 @@ class Lhapi:
     
 
     def write_file(self, content, filename):
-        with open("files/" + filename, 'w') as file:
-            file.write(content)
-        return
+        try:
+            with open("files/" + filename, 'w') as file:
+                file.write(content)
+            return
+        except TypeError:
+            print("TypeError: Empty content")
 
     
 
