@@ -1,0 +1,78 @@
+RAW DATA TABLES: {
+
+    DST_AIRCRAFTS: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRCRAFTCODE: VARCHAR #{constraint: [primary_key]}
+        AIRLINEEQUIPCODE: VARCHAR
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+    }
+
+    DST_AIRLINES: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRLINEID: VARCHAR #{constraint: [primary_key]}
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+		AIRLINE_ICAO: VARCHAR
+    }
+	
+    DST_AIRPORTS: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRPORTCODE: VARCHAR #{constraint: [primary_key]}
+        CITYCODE: VARCHAR
+        COUNTRYCODE: VARCHAR
+        LOCATIONTYPE: VARCHAR
+		NAME: VARCHAR
+		LANGUAGECODE: VARCHAR
+		LATITUDE: VARCHAR
+		LONGITUDE: VARCHAR
+		TIMEZONEID: VARCHAR
+		UTCOFFSET: VARCHAR
+    }
+	
+    DST_CITIES: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRPORTCODE: VARCHAR #{constraint: [primary_key]}
+        CITYCODE: VARCHAR
+		COUNTRYCODE: VARCHAR
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+		TIMEZONEID: VARCHAR
+		UTCOFFSET: VARCHAR
+    }
+	
+    DST_COUNTRIES: {
+        shape: sql_table
+        style: {fill: blue}
+        COUNTRYCODE: VARCHAR #{constraint: [primary_key]}
+        COUNTRYNAME: VARCHAR
+    }	
+	
+    DST_FLIGHT_SCHEDULES: {
+        shape: sql_table
+        style: {fill: blue}
+        VALUE: VARIANT #{constraint: [primary_key]}
+        AIRLINEID: VARCHAR
+		FLIGHTNUMBER: NUMBER
+        SERVICETYPE: VARCHAR
+        AIRCRAFTTYPE: VARCHAR
+		AIRCRAFTARRIVALTIMELT: NUMBER
+		AIRCRAFTOWNER: VARCHAR
+		DESTINATION: VARCHAR
+		ORIGIN: VARCHAR
+		DAYSOFOPERATION: NUMBER
+		ENDATE: VARCHAR
+		STARTDATE: VARCHAR
+    }	
+	
+	
+	
+    
+    #generic fact_table
+    #countries.id_country -> generic_fact_table.id_country: 1,n    
+    
+}
