@@ -1,0 +1,283 @@
+title: |md
+  # 'RAW DATA - 3NF DATA MODEL - SNOWFLAKE' DATA MODEL PIPELINE
+| { near: top-center }
+
+#RAW DATA TABLES: {
+
+    DST_AIRCRAFTS: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRCRAFTCODE: VARCHAR 
+        AIRLINEEQUIPCODE: VARCHAR
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+    }
+
+    DST_AIRLINES: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRLINEID: VARCHAR 
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+		AIRLINE_ICAO: VARCHAR
+    }
+	
+    DST_AIRPORTS: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRPORTCODE: VARCHAR 
+        CITYCODE: VARCHAR
+        COUNTRYCODE: VARCHAR
+        LOCATIONTYPE: VARCHAR
+		NAME: VARCHAR
+		LANGUAGECODE: VARCHAR
+		LATITUDE: VARCHAR
+		LONGITUDE: VARCHAR
+		TIMEZONEID: VARCHAR
+		UTCOFFSET: VARCHAR
+    }
+	
+    DST_CITIES: {
+        shape: sql_table
+        style: {fill: blue}
+        AIRPORTCODE: VARCHAR 
+        CITYCODE: VARCHAR
+		COUNTRYCODE: VARCHAR
+        NAME: VARCHAR
+        LANGUAGECODE: VARCHAR
+		TIMEZONEID: VARCHAR
+		UTCOFFSET: VARCHAR
+    }
+	
+    DST_COUNTRIES: {
+        shape: sql_table
+        style: {fill: blue}
+        COUNTRYCODE: VARCHAR 
+        COUNTRYNAME: VARCHAR
+    }	
+	
+    DST_FLIGHT_SCHEDULES: {
+        shape: sql_table
+        style: {fill: blue}
+        VALUE: VARIANT 
+        AIRLINEID: VARCHAR
+		FLIGHTNUMBER: NUMBER
+        SERVICETYPE: VARCHAR
+        AIRCRAFTTYPE: VARCHAR
+		AIRCRAFTARRIVALTIMELT: NUMBER
+		AIRCRAFTOWNER: VARCHAR
+		DESTINATION: VARCHAR
+		ORIGIN: VARCHAR
+		DAYSOFOPERATION: NUMBER
+		ENDATE: VARCHAR
+		STARTDATE: VARCHAR
+    }	    
+#}
+
+#3NF DATA MODEL: {
+
+    DST_3NF_AIRCRAFTS: {
+        shape: sql_table
+        style: {fill: red}
+        AIRCRAFTCODE: VARCHAR {constraint: [primary_key]}
+        AIRLINEEQUIPCODE: VARCHAR
+        NAME: VARCHAR
+    }
+
+    DST_3NF_AIRLINES: {
+        shape: sql_table
+        style: {fill: red}
+        AIRLINEID: VARCHAR {constraint: [primary_key]}
+        NAME: VARCHAR
+		AIRLINE_ICAO: VARCHAR
+    }
+	
+    DST_3NF_AIRPORTS: {
+        shape: sql_table
+        style: {fill: red}
+        AIRPORTCODE: VARCHAR {constraint: [primary_key]}
+        CITYCODE: VARCHAR
+        COUNTRYCODE: VARCHAR
+		NAME: VARCHAR
+		LATITUDE: VARCHAR
+		LONGITUDE: VARCHAR
+		LOCATIONTYPE: VARCHAR
+    }
+	
+    DST_3NF_CITIES: {
+        shape: sql_table
+        style: {fill: red}
+		ID_CITYCODE: NUMBER {constraint: [primary_key]}
+		CITYCODE: VARCHAR
+        NAME: VARCHAR
+        AIRPORTCODE: VARCHAR
+		COUNTRYCODE: VARCHAR
+    }
+	
+    DST_3NF_COUNTRIES: {
+        shape: sql_table
+        style: {fill: red}
+        COUNTRYCODE: VARCHAR {constraint: [primary_key]}
+        COUNTRYNAME: VARCHAR
+    }	
+	
+    DST_3NF_FLIGHT_SCHEDULES: {
+        shape: sql_table
+        style: {fill: red}
+        ID_FLIGHT_SCHEDULES: NUMBER {constraint: [primary_key]}
+		FLIGHTNUMBER: NUMBER
+		AIRLINEID: VARCHAR
+        SERVICETYPE: VARCHAR
+        AIRCRAFTTYPE: VARCHAR
+		AIRCRAFTARRIVALTIMELT: NUMBER
+		AIRCRAFTOWNER: VARCHAR
+		DESTINATION: VARCHAR
+		ORIGIN: VARCHAR
+		DAYSOFOPERATION: NUMBER
+		ENDATE: VARCHAR
+		STARTDATE: VARCHAR
+    }	
+	
+	DST_3NF_LOCATIONTYPE: {
+		shape: sql_table
+		style: {fill: red}
+		ID_LOCATIONTYPE: NUMBER {constraint: [primary_key]}
+		LOCATIONTYPE: VARCHAR
+	}
+	
+	DST_3NF_SERVICETYPE: {
+		shape: sql_table
+		style: {fill: red}
+		ID_SERVICETYPE: NUMBER {constraint: [primary_key]}
+		SERVICETYPE: VARCHAR
+	}	
+	
+     
+	DST_3NF_LOCATIONTYPE.ID_LOCATIONTYPE -> DST_3NF_AIRPORTS.ID_LOCATIONTYPE: 1, N {style.stroke-width:5}
+	DST_3NF_SERVICETYPE.ID_SERVICETYPE -> DST_3NF_FLIGHT_SCHEDULES.SERVICETYPE:1, N {style.stroke-width:5}
+	DST_3NF_COUNTRIES.CITYCODE -> DST_3NF_AIRPORTS.COUNTRYCODE: 1, N {style.stroke-width:5}
+	DST_3NF_CITIES.CITYCODE -> DST_3NF_AIRPORTS.CITYCODE: 1, N {style.stroke-width:5}
+	DST_3NF_AIRLINES.AIRLINEID -> DST_3NF_FLIGHT_SCHEDULES.AIRLINEID: 1, N {style.stroke-width:5}
+	DST_3NF_AIRCRAFTS.AIRCRAFTCODE -> DST_3NF_FLIGHT_SCHEDULES.AIRCRAFTCODE: 1, N {style.stroke-width:5}
+	DST_3NF_AIRPORTS.AIRCRAFTCODE -> DST_3NF_FLIGHT_SCHEDULES.ORIGIN: 1, N {style.stroke-width:5}
+	DST_3NF_AIRPORTS.AIRCRAFTCODE -> DST_3NF_FLIGHT_SCHEDULES.DESTINATION: 1, N {style.stroke-width:5}
+	   
+#}
+
+#SNOWFLAKE DATA MODEL: {
+
+    DST_DIM_AIRPORTS: {
+        shape: sql_table
+        style: {fill: green}
+		ID_DIM_AIRPORTCODE: NUMBER {constraint: [primary_key]}
+        AIRPORTCODE: VARCHAR 
+		CITY_NAME: VARCHAR
+		COUNTRY_NAME: VARCHAR
+		LOCATIONTYPE: VARCHAR
+		NAME: VARCHAR	
+		LATITUDE: VARCHAR
+		LONGITUDE: VARCHAR
+		
+    }
+	
+	
+    DST_DIM_FLIGHT_SCHEDULES: {
+        shape: sql_table
+        style: {fill: green}
+		ID_DIM_FLIGHT_SCHEDULES: NUMBER {constraint: [primary_key]}
+		FLIGHTNUMBER: NUMBER
+		AIRCRAFTTYPE: VARCHAR		
+		AIRCRAFTOWNER: VARCHAR
+		DESTINATION: VARCHAR
+		ORIGIN: VARCHAR		
+		AIRCRAFT_NAME: VARCHAR
+		AIRLINE_NAME: VARCHAR
+		SERVICETYPE: VARCHAR
+		ENDATE: VARCHAR
+		STARTDATE: VARCHAR
+    }	
+	
+	DST_DIM_FACT_FLIGHT_SCHEDULES: {
+		shape: sql_table
+        style: {fill: green}
+		ID_DIM_FACT_FLIGHT_SCHEDULES: NUMBER {constraint: [primary_key]}
+		ID_DIM_AIRPORTS: NUMBER
+		ID_DIM_FLIGHT_SCHEDULES: NUMBER
+		ID_DIM_TIME: NUMBER
+		AIRCRAFTARRIVALTIMELT: NUMBER
+		DAYSOFOPERATION: NUMBER
+	}
+	
+	DST_DIM_TIME: {
+		shape: sql_table
+        style: {fill: green}
+		ID_DIM_TIME: NUMBER
+		DATE: DATE
+		YEAR: NUMBER
+		MONTH: NUMBER
+		DAY: NUMBER
+		DAY_OF_WEEK: NUMBER
+		DAY_OF_YEAR: NUMBER
+		QUARTER: NUMBER
+		QUARTER_START_DAY_OF_YEAR: NUMBER
+		DAY_OF_QUARTER: NUMBER
+		MONTH_NAME: VARCHAR
+		MONTH_NAME_SHORT: VARCHAR
+		DAY_NAME: VARCHAR
+		DAY_NAME_SHORT: VARCHAR
+		ISO_YEAR: NUMBER
+		ISO_WEEK: NUMBER
+		ISO_QUARTER: NUMBER
+		ISO_DAY_OF_WEEK: NUMBER
+		DAYS_IN_YEAR: NUMBER
+		DAYS_REMAINING_IN_YEAR: NUMBER
+	
+	}
+    
+	
+    
+    #generic fact_table
+    #countries.id_country -> generic_fact_table.id_country: 1,n  
+	#DST_DIM_AIRCRAFTS.ID_DIM_AIRCRAFTS -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_AIRCRAFTS: 1, N {style.stroke-width:5}
+	#DST_DIM_AIRLINES.ID_DIM_AIRLINES -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_AIRLINES: 1, N {style.stroke-width:5}
+	DST_DIM_AIRPORTS.ID_DIM_AIRPORTS -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_AIRPORTS: 1, N {style.stroke-width:5}
+	#DST_DIM_SERVICETYPE.ID_DIM_SERVICETYPE -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_SERVICETYPE: 1,N {style.stroke-width:5}
+	DST_DIM_FLIGHT_SCHEDULES.ID_DIM_FLIGHT_SCHEDULES -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_FLIGHT_SCHEDULES:1, N {style.stroke-width:5}
+	DST_DIM_TIME.ID_DIM_TIME -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_TIME:1, N
+	#DST_DIM_CITIES.ID_DIM_CITIES -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_CITIES: 1,N {style.stroke-width:5}
+	#DST_DIM_COUNTRIES.ID_DIM_COUNTRIES -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_COUNTRIES:1, N {style.stroke-width:5}
+	#DST_DIM_LOCATIONTYPE.ID_DIM_LOCATIONTYPE -> DST_DIM_FACT_FLIGHT_SCHEDULES.ID_DIM_LOCATIONTYPE:1, N {style.stroke-width:5}
+	  
+#}
+
+
+DST_AIRCRAFTS --> DST_3NF_AIRCRAFTS : raw to 3NF data flow {style.animated:true}
+DST_AIRLINES --> DST_3NF_AIRLINES: raw to 3NF data flow {style.animated: true}
+DST_COUNTRIES --> DST_3NF_COUNTRIES: raw to 3NF data flow {style.animated: true}
+DST_CITIES --> DST_3NF_CITIES: raw to 3NF data flow {style.animated: true}
+DST_AIRPORTS --> DST_3NF_AIRPORTS: raw to 3NF data flow {style.animated: true}
+DST_AIRPORTS --> DST_3NF_LOCATIONTYPE: raw to 3NF data flow {style.animated: true}
+DST_FLIGHT_SCHEDULES --> DST_3NF_FLIGHT_SCHEDULES: raw to 3NF data flow {style.animated: true}
+DST_FLIGHT_SCHEDULES --> DST_3NF_SERVICETYPE: raw to 3NF data flow {style.animated: true}
+
+#DST_3NF_AIRCRAFTS --> DST_DIM_AIRCRAFTS: 3NF to Snowflake data flow {style.animated: true}
+#DST_3NF_AIRLINES --> DST_DIM_AIRLINES: 3NF to Snowflake data flow {style.animated: true}
+#DST_3NF_COUNTRIES --> DST_DIM_COUNTRIES: 3NF to Snowflake data flow {style.animated: true}
+#DST_3NF_CITIES --> DST_DIM_CITIES: 3NF to Snowflake data flow {style.animated: true}
+DST_3NF_AIRPORTS --> DST_DIM_AIRPORTS: 3NF to Snowflake data flow {style.animated: true}
+DST_3NF_FLIGHT_SCHEDULES --> DST_DIM_FLIGHT_SCHEDULES: 3NF to Snowflake data flow {style.animated: true}
+#DST_3NF_SERVICETYPE --> DST_DIM_SERVICETYPE: 3NF to Snowflake data flow {style.animated: true}
+#DST_DIM_AIRPORTS --> DST_DIM_LOCATIONTYPE: 3NF to Snowflake data flow {style.animated: true}
+#DST_3NF_LOCATIONTYPE --> DST_DIM_LOCATIONTYPE: 3NF to Snowflake data flow {style.animated: true}
+
+#DST_DIM_AIRCRAFTS --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_AIRLINES --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_COUNTRIES --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_CITIES --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_AIRPORTS --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_FLIGHT_SCHEDULES --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_SERVICETYPE --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+#DST_DIM_LOCATIONTYPE --> DST_DIM_FACT_FLIGHT_SCHEDULES: fact table data flow {style.animated: true}
+
+
+
