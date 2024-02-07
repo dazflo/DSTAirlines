@@ -127,6 +127,8 @@ class Lhapi:
                     time.sleep(10)
                     retry += 1
                 else:
+                    if "flightstatus" in url and req.status_code == 404:
+                        return
                     raise Exception(f"Error {req.status_code} when requesting {url} with {retry} retries")
                 return self.request_api(url, retry)
         else:
