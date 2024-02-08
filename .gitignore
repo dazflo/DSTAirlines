@@ -14,3 +14,5 @@ files/*
 
 # Ignore generated .svg from d2
 data_modeling/*.svg
+
+sql_test
