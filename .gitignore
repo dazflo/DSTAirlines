@@ -16,3 +16,5 @@ files/*
 data_modeling/*.svg
 
 sql_test
+config/sf_access.toml
+config/connections.toml

@@ -57,12 +57,10 @@ class Lhapi:
         return self.read_access_file()
 
         
-
     def get_proxies(self, conf):
         if "proxies" not in conf:
             conf['proxies'] = {"http": "", "https": ""}
         return conf
-
 
 
     def get_token(self, conf):
@@ -124,17 +122,23 @@ class Lhapi:
                 logger.error(f"{req.text}")
                 # to counter: The service being accessed is overloaded. Restricted access only
                 if retry <= 6:
+                    if retry == 1:
+                        # we have a lot of 404 on flightstatus requests
+                        if "flightstatus" in url:
+                            if req.status_code == 404:
+                                print(f"404 http code on flightstatus")
+                                return 404
+                            if req.status_code == 403:
+                                time.sleep(600)
                     time.sleep(10)
                     retry += 1
                 else:
-                    if "flightstatus" in url and req.status_code == 404:
-                        return
                     raise Exception(f"Error {req.status_code} when requesting {url} with {retry} retries")
                 return self.request_api(url, retry)
         else:
             return json.dumps(req.json(), indent=2)
         finally:
-            time.sleep(1)
+            time.sleep(2)
         return
 
 
@@ -174,7 +178,6 @@ class Lhapi:
                     break
         return next_link
 
-    
 
     def request_full_files(self, url, resource_name):
         # Attention il semble que l'offset génère 1 doublon à chaque fois, à vérifier
@@ -183,6 +186,8 @@ class Lhapi:
 
         while url:
             content = self.request_api(url)
+            if content == 404:
+                return
             filename = f"{req_date}_{resource_name}_{request_counter}.json"
             self.write_file(content, filename)
             url = self.get_next_link(self.get_meta(content))
