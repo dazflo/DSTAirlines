@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: abfss_dst
+    tables:
+      - name: aircrafts
+        description: >
+            This source table is actually a set of files in external storage.
+            The dbt-external-tables package provides handy macros for getting
+            those files queryable, just in time for modeling.
+                            
+        external:
+          location:         # required: S3 file path, GCS file path, Snowflake stage, Synapse data source
+          
+          ...               # database-specific properties of external table
+          
+          partitions:       # optional
+            - name: collector_date
+              data_type: date
+              ...           # database-specific properties
+
+        # Specify ALL column names + datatypes.
+        # Column order must match for CSVs, column names must match for other formats.
+        # Some databases support schema inference.
+
+        columns:
+          - name: app_id
+            data_type: varchar(255)
+            description: "Application ID"
+          - name: platform
+            data_type: varchar(255)
+            description: "Platform"
+          ...
