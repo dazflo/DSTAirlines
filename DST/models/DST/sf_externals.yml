@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: dst_externals
+    tables:
+      - name: aircrafts
+        description: >
+            This source table is actually a set of files in external storage.
+            The dbt-external-tables package provides handy macros for getting
+            those files queryable, just in time for modeling.                
+        external:
+          location: "@DB_SL_EP_LAB.DST.DST_STAGE/references/aircrafts"
+          file_format: "( type = json )"
+          pattern: ".*_aircraft_.*[.]json"
+      - name: airlines
+        description: >
+            This source table is actually a set of files in external storage.
+            The dbt-external-tables package provides handy macros for getting
+            those files queryable, just in time for modeling.                
+        external:
+          location: "@DB_SL_EP_LAB.DST.DST_STAGE/references/airlines"
+          file_format: "( type = json )"
+          pattern: ".*_airlines_.*[.]json"
+      - name: airports
+        description: >
+            This source table is actually a set of files in external storage.
+            The dbt-external-tables package provides handy macros for getting
+            those files queryable, just in time for modeling.                
+        external:
+          location: "@DB_SL_EP_LAB.DST.DST_STAGE/references/airports"
+          file_format: "( type = json )"
+          pattern: ".*_airports_.*[.]json"
