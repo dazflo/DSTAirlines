@@ -129,7 +129,7 @@ class Lhapi:
                                 print(f"404 http code on flightstatus")
                                 return 404
                             if req.status_code == 403:
-                                time.sleep(900)
+                                time.sleep(960)
                     time.sleep(10)
                     retry += 1
                 else:
