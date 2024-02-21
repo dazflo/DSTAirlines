@@ -36,8 +36,8 @@ DST_3NF_AIRPORTS: {
     CITYCODE: VARCHAR {constraint: foreign_key}
     LOCATIONTYPE: VARCHAR
     AIRPORTNAME: VARCHAR
-    LATITUDE: VARCHAR
-    LONGITUDE: VARCHAR
+    LATITUDE: FLOAT
+    LONGITUDE: FLOAT
 }
 
 # useless because 1 value depends on airport pk
@@ -94,7 +94,7 @@ DST_3NF_COUNTRIES: {
 
 # Code du type de service, description du service, application du service, contenu du service
 # ex: 'J', 'Normal Service', 'Scheduled', 'Passenger'
-DST_3NF_SERVICE_TYPE {
+DST_3NF_SERVICE_TYPES {
     shape: sql_table
     style: {fill: red}
     SERVICETYPECODE: VARCHAR {constraint: [primary_key]}
@@ -114,17 +114,19 @@ DST_3NF_FLIGHTS: {
     FLIGHTNUMBER: NUMBER
     SERVICETYPECODE: VARCHAR {constraint: foreign_key}
     AIRCRAFTCODE: VARCHAR {constraint: foreign_key}
+    AIRCRAFTOWNER: VARCHAR {constraint: foreign_key}
     DEPARTUREAIRPORTCODE: VARCHAR {constraint: foreign_key}
-    DEPARTURETIMESTATUSCODE: VARCHAR {constraint: foreign_key}
     # DEPARTURETERMINALGATE: VARCHAR {constraint: foreign_key}
     DEPARTUREDATETIMEUTC: DATETIME
+    DEPARTUEACTUALDATETIMEUTC: DATETIME
+    DEPARTURETIMESTATUSCODE: VARCHAR {constraint: foreign_key}
     # ARRIVALTERMINALGATE: VARCHAR {constraint: foreign_key}
-    ARRIVALTIMESTATUSCODE: VARCHAR {constraint: foreign_key}
-    ARRIVALAIRPORTCODE: VARCHAR
+    ARRIVALAIRPORTCODE: VARCHAR {constraint: foreign_key}
     ARRIVALDATETIMEUTC: DATETIME
-    ARRIVALESTIMAEDDATETIMEUTC: DATETIME
+    ARRIVALACTUALDATETIMEUTC: DATETIME
+    ARRIVALTIMESTATUSCODE: VARCHAR {constraint: foreign_key}
     # CONFIGURATIONVERSION: VARCHAR
-    AIRCRAFTOWNER: VARCHAR {constraint: foreign_key}
+ 
     OPERATINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
     OPERATINGCARRIERFLIGHTNUMBER: NUMBER
     MARKETINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
