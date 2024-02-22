@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.6.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 2632 3843"><svg id="d2-svg" class="d2-1501103601" width="2632" height="3843" viewBox="-101 -172 2632 3843"><rect x="-101.000000" y="-172.000000" width="2632.000000" height="3843.000000" rx="0.000000" class=" fill-N7" stroke-width="0" /><style type="text/css"><![CDATA[
+.d2-1501103601 .text {
+	font-family: "d2-1501103601-font-regular";
+}
+@font-face {
+	font-family: d2-1501103601-font-regular;
+	src: url("data:application/font-woff;base64,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");
+}
+@font-face {
+	font-family: d2-1501103601-font-semibold;
+	src: url("data:application/font-woff;base64,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");
+}
+@keyframes dashdraw {
+	from {
+		stroke-dashoffset: 0;
+	}
+}
+
+.d2-1501103601 .text-italic {
+	font-family: "d2-1501103601-font-italic";
+}
+@font-face {
+	font-family: d2-1501103601-font-italic;
+	src: url("data:application/font-woff;base64,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");
+}]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-1501103601 .fill-N1{fill:#0A0F25;}
+		.d2-1501103601 .fill-N2{fill:#676C7E;}
+		.d2-1501103601 .fill-N3{fill:#9499AB;}
+		.d2-1501103601 .fill-N4{fill:#CFD2DD;}
+		.d2-1501103601 .fill-N5{fill:#DEE1EB;}
+		.d2-1501103601 .fill-N6{fill:#EEF1F8;}
+		.d2-1501103601 .fill-N7{fill:#FFFFFF;}
+		.d2-1501103601 .fill-B1{fill:#0D32B2;}
+		.d2-1501103601 .fill-B2{fill:#0D32B2;}
+		.d2-1501103601 .fill-B3{fill:#E3E9FD;}
+		.d2-1501103601 .fill-B4{fill:#E3E9FD;}
+		.d2-1501103601 .fill-B5{fill:#EDF0FD;}
+		.d2-1501103601 .fill-B6{fill:#F7F8FE;}
+		.d2-1501103601 .fill-AA2{fill:#4A6FF3;}
+		.d2-1501103601 .fill-AA4{fill:#EDF0FD;}
+		.d2-1501103601 .fill-AA5{fill:#F7F8FE;}
+		.d2-1501103601 .fill-AB4{fill:#EDF0FD;}
+		.d2-1501103601 .fill-AB5{fill:#F7F8FE;}
+		.d2-1501103601 .stroke-N1{stroke:#0A0F25;}
+		.d2-1501103601 .stroke-N2{stroke:#676C7E;}
+		.d2-1501103601 .stroke-N3{stroke:#9499AB;}
+		.d2-1501103601 .stroke-N4{stroke:#CFD2DD;}
+		.d2-1501103601 .stroke-N5{stroke:#DEE1EB;}
+		.d2-1501103601 .stroke-N6{stroke:#EEF1F8;}
+		.d2-1501103601 .stroke-N7{stroke:#FFFFFF;}
+		.d2-1501103601 .stroke-B1{stroke:#0D32B2;}
+		.d2-1501103601 .stroke-B2{stroke:#0D32B2;}
+		.d2-1501103601 .stroke-B3{stroke:#E3E9FD;}
+		.d2-1501103601 .stroke-B4{stroke:#E3E9FD;}
+		.d2-1501103601 .stroke-B5{stroke:#EDF0FD;}
+		.d2-1501103601 .stroke-B6{stroke:#F7F8FE;}
+		.d2-1501103601 .stroke-AA2{stroke:#4A6FF3;}
+		.d2-1501103601 .stroke-AA4{stroke:#EDF0FD;}
+		.d2-1501103601 .stroke-AA5{stroke:#F7F8FE;}
+		.d2-1501103601 .stroke-AB4{stroke:#EDF0FD;}
+		.d2-1501103601 .stroke-AB5{stroke:#F7F8FE;}
+		.d2-1501103601 .background-color-N1{background-color:#0A0F25;}
+		.d2-1501103601 .background-color-N2{background-color:#676C7E;}
+		.d2-1501103601 .background-color-N3{background-color:#9499AB;}
+		.d2-1501103601 .background-color-N4{background-color:#CFD2DD;}
+		.d2-1501103601 .background-color-N5{background-color:#DEE1EB;}
+		.d2-1501103601 .background-color-N6{background-color:#EEF1F8;}
+		.d2-1501103601 .background-color-N7{background-color:#FFFFFF;}
+		.d2-1501103601 .background-color-B1{background-color:#0D32B2;}
+		.d2-1501103601 .background-color-B2{background-color:#0D32B2;}
+		.d2-1501103601 .background-color-B3{background-color:#E3E9FD;}
+		.d2-1501103601 .background-color-B4{background-color:#E3E9FD;}
+		.d2-1501103601 .background-color-B5{background-color:#EDF0FD;}
+		.d2-1501103601 .background-color-B6{background-color:#F7F8FE;}
+		.d2-1501103601 .background-color-AA2{background-color:#4A6FF3;}
+		.d2-1501103601 .background-color-AA4{background-color:#EDF0FD;}
+		.d2-1501103601 .background-color-AA5{background-color:#F7F8FE;}
+		.d2-1501103601 .background-color-AB4{background-color:#EDF0FD;}
+		.d2-1501103601 .background-color-AB5{background-color:#F7F8FE;}
+		.d2-1501103601 .color-N1{color:#0A0F25;}
+		.d2-1501103601 .color-N2{color:#676C7E;}
+		.d2-1501103601 .color-N3{color:#9499AB;}
+		.d2-1501103601 .color-N4{color:#CFD2DD;}
+		.d2-1501103601 .color-N5{color:#DEE1EB;}
+		.d2-1501103601 .color-N6{color:#EEF1F8;}
+		.d2-1501103601 .color-N7{color:#FFFFFF;}
+		.d2-1501103601 .color-B1{color:#0D32B2;}
+		.d2-1501103601 .color-B2{color:#0D32B2;}
+		.d2-1501103601 .color-B3{color:#E3E9FD;}
+		.d2-1501103601 .color-B4{color:#E3E9FD;}
+		.d2-1501103601 .color-B5{color:#EDF0FD;}
+		.d2-1501103601 .color-B6{color:#F7F8FE;}
+		.d2-1501103601 .color-AA2{color:#4A6FF3;}
+		.d2-1501103601 .color-AA4{color:#EDF0FD;}
+		.d2-1501103601 .color-AA5{color:#F7F8FE;}
+		.d2-1501103601 .color-AB4{color:#EDF0FD;}
+		.d2-1501103601 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css">.d2-1501103601 .md em,
+.d2-1501103601 .md dfn {
+  font-family: "d2-1501103601-font-italic";
+}
+
+.d2-1501103601 .md b,
+.d2-1501103601 .md strong {
+  font-family: "d2-1501103601-font-bold";
+}
+
+.d2-1501103601 .md code,
+.d2-1501103601 .md kbd,
+.d2-1501103601 .md pre,
+.d2-1501103601 .md samp {
+  font-family: "d2-1501103601-font-mono";
+  font-size: 1em;
+}
+
+.d2-1501103601 .md {
+  tab-size: 4;
+}
+
+/* variables are provided in d2renderers/d2svg/d2svg.go */
+
+.d2-1501103601 .md {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: transparent; /* we don't want to define the background color */
+  font-family: "d2-1501103601-font-regular";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.d2-1501103601 .md details,
+.d2-1501103601 .md figcaption,
+.d2-1501103601 .md figure {
+  display: block;
+}
+
+.d2-1501103601 .md summary {
+  display: list-item;
+}
+
+.d2-1501103601 .md [hidden] {
+  display: none !important;
+}
+
+.d2-1501103601 .md a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.d2-1501103601 .md a:active,
+.d2-1501103601 .md a:hover {
+  outline-width: 0;
+}
+
+.d2-1501103601 .md abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+.d2-1501103601 .md dfn {
+  font-style: italic;
+}
+
+.d2-1501103601 .md h1 {
+  margin: 0.67em 0;
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.d2-1501103601 .md mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-text-primary);
+}
+
+.d2-1501103601 .md small {
+  font-size: 90%;
+}
+
+.d2-1501103601 .md sub,
+.d2-1501103601 .md sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.d2-1501103601 .md sub {
+  bottom: -0.25em;
+}
+
+.d2-1501103601 .md sup {
+  top: -0.5em;
+}
+
+.d2-1501103601 .md img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.d2-1501103601 .md figure {
+  margin: 1em 40px;
+}
+
+.d2-1501103601 .md hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.d2-1501103601 .md input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.d2-1501103601 .md [type="button"],
+.d2-1501103601 .md [type="reset"],
+.d2-1501103601 .md [type="submit"] {
+  -webkit-appearance: button;
+}
+
+.d2-1501103601 .md [type="button"]::-moz-focus-inner,
+.d2-1501103601 .md [type="reset"]::-moz-focus-inner,
+.d2-1501103601 .md [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.d2-1501103601 .md [type="button"]:-moz-focusring,
+.d2-1501103601 .md [type="reset"]:-moz-focusring,
+.d2-1501103601 .md [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.d2-1501103601 .md [type="checkbox"],
+.d2-1501103601 .md [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.d2-1501103601 .md [type="number"]::-webkit-inner-spin-button,
+.d2-1501103601 .md [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.d2-1501103601 .md [type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+.d2-1501103601 .md [type="search"]::-webkit-search-cancel-button,
+.d2-1501103601 .md [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.d2-1501103601 .md ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+.d2-1501103601 .md ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+.d2-1501103601 .md a:hover {
+  text-decoration: underline;
+}
+
+.d2-1501103601 .md hr::before {
+  display: table;
+  content: "";
+}
+
+.d2-1501103601 .md hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.d2-1501103601 .md table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.d2-1501103601 .md td,
+.d2-1501103601 .md th {
+  padding: 0;
+}
+
+.d2-1501103601 .md details summary {
+  cursor: pointer;
+}
+
+.d2-1501103601 .md details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+
+.d2-1501103601 .md kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.d2-1501103601 .md h1,
+.d2-1501103601 .md h2,
+.d2-1501103601 .md h3,
+.d2-1501103601 .md h4,
+.d2-1501103601 .md h5,
+.d2-1501103601 .md h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: "d2-1501103601-font-semibold";
+}
+
+.d2-1501103601 .md h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.d2-1501103601 .md h3 {
+  font-size: 1.25em;
+}
+
+.d2-1501103601 .md h4 {
+  font-size: 1em;
+}
+
+.d2-1501103601 .md h5 {
+  font-size: 0.875em;
+}
+
+.d2-1501103601 .md h6 {
+  font-size: 0.85em;
+  color: var(--color-fg-muted);
+}
+
+.d2-1501103601 .md p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.d2-1501103601 .md blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: 0.25em solid var(--color-border-default);
+}
+
+.d2-1501103601 .md ul,
+.d2-1501103601 .md ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.d2-1501103601 .md ol ol,
+.d2-1501103601 .md ul ol {
+  list-style-type: lower-roman;
+}
+
+.d2-1501103601 .md ul ul ol,
+.d2-1501103601 .md ul ol ol,
+.d2-1501103601 .md ol ul ol,
+.d2-1501103601 .md ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.d2-1501103601 .md dd {
+  margin-left: 0;
+}
+
+.d2-1501103601 .md pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  word-wrap: normal;
+}
+
+.d2-1501103601 .md ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.d2-1501103601 .md input::-webkit-outer-spin-button,
+.d2-1501103601 .md input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.d2-1501103601 .md::before {
+  display: table;
+  content: "";
+}
+
+.d2-1501103601 .md::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.d2-1501103601 .md > *:first-child {
+  margin-top: 0 !important;
+}
+
+.d2-1501103601 .md > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.d2-1501103601 .md a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.d2-1501103601 .md .absent {
+  color: var(--color-danger-fg);
+}
+
+.d2-1501103601 .md .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.d2-1501103601 .md .anchor:focus {
+  outline: none;
+}
+
+.d2-1501103601 .md p,
+.d2-1501103601 .md blockquote,
+.d2-1501103601 .md ul,
+.d2-1501103601 .md ol,
+.d2-1501103601 .md dl,
+.d2-1501103601 .md table,
+.d2-1501103601 .md pre,
+.d2-1501103601 .md details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.d2-1501103601 .md blockquote > :first-child {
+  margin-top: 0;
+}
+
+.d2-1501103601 .md blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.d2-1501103601 .md sup > a::before {
+  content: "[";
+}
+
+.d2-1501103601 .md sup > a::after {
+  content: "]";
+}
+
+.d2-1501103601 .md h1:hover .anchor,
+.d2-1501103601 .md h2:hover .anchor,
+.d2-1501103601 .md h3:hover .anchor,
+.d2-1501103601 .md h4:hover .anchor,
+.d2-1501103601 .md h5:hover .anchor,
+.d2-1501103601 .md h6:hover .anchor {
+  text-decoration: none;
+}
+
+.d2-1501103601 .md h1 tt,
+.d2-1501103601 .md h1 code,
+.d2-1501103601 .md h2 tt,
+.d2-1501103601 .md h2 code,
+.d2-1501103601 .md h3 tt,
+.d2-1501103601 .md h3 code,
+.d2-1501103601 .md h4 tt,
+.d2-1501103601 .md h4 code,
+.d2-1501103601 .md h5 tt,
+.d2-1501103601 .md h5 code,
+.d2-1501103601 .md h6 tt,
+.d2-1501103601 .md h6 code {
+  padding: 0 0.2em;
+  font-size: inherit;
+}
+
+.d2-1501103601 .md ul.no-list,
+.d2-1501103601 .md ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.d2-1501103601 .md ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.d2-1501103601 .md ol[type="a"] {
+  list-style-type: lower-alpha;
+}
+
+.d2-1501103601 .md ol[type="i"] {
+  list-style-type: lower-roman;
+}
+
+.d2-1501103601 .md div > ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.d2-1501103601 .md ul ul,
+.d2-1501103601 .md ul ol,
+.d2-1501103601 .md ol ol,
+.d2-1501103601 .md ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.d2-1501103601 .md li > p {
+  margin-top: 16px;
+}
+
+.d2-1501103601 .md li + li {
+  margin-top: 0.25em;
+}
+
+.d2-1501103601 .md dl {
+  padding: 0;
+}
+
+.d2-1501103601 .md dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-family: "d2-1501103601-font-semibold";
+}
+
+.d2-1501103601 .md dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.d2-1501103601 .md table th {
+  font-family: "d2-1501103601-font-semibold";
+}
+
+.d2-1501103601 .md table th,
+.d2-1501103601 .md table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.d2-1501103601 .md table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.d2-1501103601 .md table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.d2-1501103601 .md table img {
+  background-color: transparent;
+}
+
+.d2-1501103601 .md img[align="right"] {
+  padding-left: 20px;
+}
+
+.d2-1501103601 .md img[align="left"] {
+  padding-right: 20px;
+}
+
+.d2-1501103601 .md span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.d2-1501103601 .md span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.d2-1501103601 .md span.frame span img {
+  display: block;
+  float: left;
+}
+
+.d2-1501103601 .md span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.d2-1501103601 .md span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.d2-1501103601 .md span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.d2-1501103601 .md span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.d2-1501103601 .md span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.d2-1501103601 .md span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.d2-1501103601 .md span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.d2-1501103601 .md span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.d2-1501103601 .md span.float-left span {
+  margin: 13px 0 0;
+}
+
+.d2-1501103601 .md span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.d2-1501103601 .md span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.d2-1501103601 .md code,
+.d2-1501103601 .md tt {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.d2-1501103601 .md code br,
+.d2-1501103601 .md tt br {
+  display: none;
+}
+
+.d2-1501103601 .md del code {
+  text-decoration: inherit;
+}
+
+.d2-1501103601 .md pre code {
+  font-size: 100%;
+}
+
+.d2-1501103601 .md pre > code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.d2-1501103601 .md .highlight {
+  margin-bottom: 16px;
+}
+
+.d2-1501103601 .md .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.d2-1501103601 .md .highlight pre,
+.d2-1501103601 .md pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.d2-1501103601 .md pre code,
+.d2-1501103601 .md pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.d2-1501103601 .md .csv-data td,
+.d2-1501103601 .md .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.d2-1501103601 .md .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.d2-1501103601 .md .csv-data tr {
+  border-top: 0;
+}
+
+.d2-1501103601 .md .csv-data th {
+  font-family: "d2-1501103601-font-semibold";
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.d2-1501103601 .md .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.d2-1501103601 .md .footnotes ol {
+  padding-left: 16px;
+}
+
+.d2-1501103601 .md .footnotes li {
+  position: relative;
+}
+
+.d2-1501103601 .md .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.d2-1501103601 .md .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.d2-1501103601 .md .task-list-item {
+  list-style-type: none;
+}
+
+.d2-1501103601 .md .task-list-item label {
+  font-weight: 400;
+}
+
+.d2-1501103601 .md .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.d2-1501103601 .md .task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.d2-1501103601 .md .task-list-item .handle {
+  display: none;
+}
+
+.d2-1501103601 .md .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.d2-1501103601 .md .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em 0.25em 0.2em;
+}
+</style><g id="DST_AIRCRAFTS"><g class="shape" ><rect x="22.000000" y="890.000000" width="296.000000" height="180.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="22.000000" y="890.000000" width="296.000000" height="36.000000" fill="blue" class="class_header" /><text x="32.000000" y="915.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_AIRCRAFTS</text><text x="32.000000" y="949.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTCODE</text><text x="219.000000" y="949.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="308.000000" y="949.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="22.000000" x2="318.000000" y1="962.000000" y2="962.000000" stroke="blue" style="stroke-width:2" /><text x="32.000000" y="985.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEEQUIPCODE</text><text x="219.000000" y="985.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="308.000000" y="985.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="22.000000" x2="318.000000" y1="998.000000" y2="998.000000" stroke="blue" style="stroke-width:2" /><text x="32.000000" y="1021.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="219.000000" y="1021.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="308.000000" y="1021.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="22.000000" x2="318.000000" y1="1034.000000" y2="1034.000000" stroke="blue" style="stroke-width:2" /><text x="32.000000" y="1057.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LANGUAGECODE</text><text x="219.000000" y="1057.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="308.000000" y="1057.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="22.000000" x2="318.000000" y1="1070.000000" y2="1070.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_AIRLINES"><g class="shape" ><rect x="410.000000" y="890.000000" width="268.000000" height="180.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="410.000000" y="890.000000" width="268.000000" height="36.000000" fill="blue" class="class_header" /><text x="420.000000" y="915.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_AIRLINES</text><text x="420.000000" y="949.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEID</text><text x="579.000000" y="949.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="668.000000" y="949.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="410.000000" x2="678.000000" y1="962.000000" y2="962.000000" stroke="blue" style="stroke-width:2" /><text x="420.000000" y="985.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="579.000000" y="985.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="668.000000" y="985.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="410.000000" x2="678.000000" y1="998.000000" y2="998.000000" stroke="blue" style="stroke-width:2" /><text x="420.000000" y="1021.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LANGUAGECODE</text><text x="579.000000" y="1021.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="668.000000" y="1021.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="410.000000" x2="678.000000" y1="1034.000000" y2="1034.000000" stroke="blue" style="stroke-width:2" /><text x="420.000000" y="1057.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINE_ICAO</text><text x="579.000000" y="1057.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="668.000000" y="1057.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="410.000000" x2="678.000000" y1="1070.000000" y2="1070.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_AIRPORTS"><g class="shape" ><rect x="1289.000000" y="229.000000" width="268.000000" height="396.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="1289.000000" y="229.000000" width="268.000000" height="36.000000" fill="blue" class="class_header" /><text x="1299.000000" y="254.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_AIRPORTS</text><text x="1299.000000" y="288.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRPORTCODE</text><text x="1458.000000" y="288.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="288.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="301.000000" y2="301.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="324.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">CITYCODE</text><text x="1458.000000" y="324.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="324.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="337.000000" y2="337.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="360.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="1458.000000" y="360.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="360.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="373.000000" y2="373.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="396.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LOCATIONTYPE</text><text x="1458.000000" y="396.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="396.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="409.000000" y2="409.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="432.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="1458.000000" y="432.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="432.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="445.000000" y2="445.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="468.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LANGUAGECODE</text><text x="1458.000000" y="468.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="468.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="481.000000" y2="481.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="504.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LATITUDE</text><text x="1458.000000" y="504.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="504.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="517.000000" y2="517.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="540.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LONGITUDE</text><text x="1458.000000" y="540.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="540.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="553.000000" y2="553.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="576.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">TIMEZONEID</text><text x="1458.000000" y="576.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="576.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="589.000000" y2="589.000000" stroke="blue" style="stroke-width:2" /><text x="1299.000000" y="612.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">UTCOFFSET</text><text x="1458.000000" y="612.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1547.000000" y="612.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1289.000000" x2="1557.000000" y1="625.000000" y2="625.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_CITIES"><g class="shape" ><rect x="1800.000000" y="283.000000" width="268.000000" height="288.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="1800.000000" y="283.000000" width="268.000000" height="36.000000" fill="blue" class="class_header" /><text x="1810.000000" y="308.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_CITIES</text><text x="1810.000000" y="342.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRPORTCODE</text><text x="1969.000000" y="342.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="342.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="355.000000" y2="355.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="378.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">CITYCODE</text><text x="1969.000000" y="378.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="378.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="391.000000" y2="391.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="414.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="1969.000000" y="414.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="414.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="427.000000" y2="427.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="450.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="1969.000000" y="450.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="450.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="463.000000" y2="463.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="486.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LANGUAGECODE</text><text x="1969.000000" y="486.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="486.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="499.000000" y2="499.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="522.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">TIMEZONEID</text><text x="1969.000000" y="522.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="522.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="535.000000" y2="535.000000" stroke="blue" style="stroke-width:2" /><text x="1810.000000" y="558.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">UTCOFFSET</text><text x="1969.000000" y="558.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2058.000000" y="558.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1800.000000" x2="2068.000000" y1="571.000000" y2="571.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_COUNTRIES"><g class="shape" ><rect x="2150.000000" y="0.000000" width="259.000000" height="108.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="2150.000000" y="0.000000" width="259.000000" height="36.000000" fill="blue" class="class_header" /><text x="2160.000000" y="25.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_COUNTRIES</text><text x="2160.000000" y="59.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="2310.000000" y="59.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2399.000000" y="59.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="2150.000000" x2="2409.000000" y1="72.000000" y2="72.000000" stroke="blue" style="stroke-width:2" /><text x="2160.000000" y="95.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYNAME</text><text x="2310.000000" y="95.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2399.000000" y="95.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="2150.000000" x2="2409.000000" y1="108.000000" y2="108.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_FLIGHT_SCHEDULES"><g class="shape" ><rect x="745.000000" y="746.000000" width="343.000000" height="468.000000" stroke="blue" class="shape fill-N7" style="stroke-width:2;" /><rect x="745.000000" y="746.000000" width="343.000000" height="36.000000" fill="blue" class="class_header" /><text x="755.000000" y="771.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_FLIGHT_SCHEDULES</text><text x="755.000000" y="805.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">VALUE</text><text x="989.000000" y="805.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARIANT</text><text x="1078.000000" y="805.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="818.000000" y2="818.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="841.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEID</text><text x="989.000000" y="841.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="841.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="854.000000" y2="854.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="877.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">FLIGHTNUMBER</text><text x="989.000000" y="877.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1078.000000" y="877.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="890.000000" y2="890.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="913.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">SERVICETYPE</text><text x="989.000000" y="913.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="913.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="926.000000" y2="926.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="949.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTTYPE</text><text x="989.000000" y="949.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="949.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="962.000000" y2="962.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="985.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTARRIVALTIMELT</text><text x="989.000000" y="985.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1078.000000" y="985.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="998.000000" y2="998.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1021.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTOWNER</text><text x="989.000000" y="1021.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="1021.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1034.000000" y2="1034.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1057.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DESTINATION</text><text x="989.000000" y="1057.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="1057.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1070.000000" y2="1070.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1093.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ORIGIN</text><text x="989.000000" y="1093.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="1093.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1106.000000" y2="1106.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1129.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAYSOFOPERATION</text><text x="989.000000" y="1129.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1078.000000" y="1129.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1142.000000" y2="1142.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1165.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ENDATE</text><text x="989.000000" y="1165.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="1165.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1178.000000" y2="1178.000000" stroke="blue" style="stroke-width:2" /><text x="755.000000" y="1201.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">STARTDATE</text><text x="989.000000" y="1201.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1078.000000" y="1201.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="745.000000" x2="1088.000000" y1="1214.000000" y2="1214.000000" stroke="blue" style="stroke-width:2" /></g></g><g id="DST_3NF_AIRCRAFTS"><g class="shape" ><rect x="0.000000" y="1443.000000" width="339.000000" height="144.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="0.000000" y="1443.000000" width="339.000000" height="36.000000" fill="red" class="class_header" /><text x="10.000000" y="1468.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_AIRCRAFTS</text><text x="10.000000" y="1502.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTCODE</text><text x="197.000000" y="1502.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="329.000000" y="1502.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="0.000000" x2="339.000000" y1="1515.000000" y2="1515.000000" stroke="red" style="stroke-width:2" /><text x="10.000000" y="1538.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEEQUIPCODE</text><text x="197.000000" y="1538.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="329.000000" y="1538.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="0.000000" x2="339.000000" y1="1551.000000" y2="1551.000000" stroke="red" style="stroke-width:2" /><text x="10.000000" y="1574.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="197.000000" y="1574.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="329.000000" y="1574.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="0.000000" x2="339.000000" y1="1587.000000" y2="1587.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_AIRLINES"><g class="shape" ><rect x="399.000000" y="1443.000000" width="289.000000" height="144.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="399.000000" y="1443.000000" width="289.000000" height="36.000000" fill="red" class="class_header" /><text x="409.000000" y="1468.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_AIRLINES</text><text x="409.000000" y="1502.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEID</text><text x="546.000000" y="1502.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="678.000000" y="1502.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="399.000000" x2="688.000000" y1="1515.000000" y2="1515.000000" stroke="red" style="stroke-width:2" /><text x="409.000000" y="1538.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="546.000000" y="1538.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="678.000000" y="1538.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="399.000000" x2="688.000000" y1="1551.000000" y2="1551.000000" stroke="red" style="stroke-width:2" /><text x="409.000000" y="1574.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINE_ICAO</text><text x="546.000000" y="1574.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="678.000000" y="1574.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="399.000000" x2="688.000000" y1="1587.000000" y2="1587.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_AIRPORTS"><g class="shape" ><rect x="1396.000000" y="1335.000000" width="328.000000" height="360.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="1396.000000" y="1335.000000" width="328.000000" height="36.000000" fill="red" class="class_header" /><text x="1406.000000" y="1360.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_AIRPORTS</text><text x="1406.000000" y="1394.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRPORTCODE</text><text x="1582.000000" y="1394.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1394.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="1396.000000" x2="1724.000000" y1="1407.000000" y2="1407.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1430.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">CITYCODE</text><text x="1582.000000" y="1430.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1430.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1443.000000" y2="1443.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1466.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="1582.000000" y="1466.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1466.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1479.000000" y2="1479.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1502.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="1582.000000" y="1502.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1502.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1515.000000" y2="1515.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1538.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LATITUDE</text><text x="1582.000000" y="1538.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1538.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1551.000000" y2="1551.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1574.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LONGITUDE</text><text x="1582.000000" y="1574.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1574.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1587.000000" y2="1587.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1610.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LOCATIONTYPE</text><text x="1582.000000" y="1610.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1714.000000" y="1610.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1623.000000" y2="1623.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1646.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_LOCATIONTYPE</text><text x="1582.000000" y="1646.000000" class="text fill-N2" style="text-anchor:start;font-size:20px" /><text x="1714.000000" y="1646.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1659.000000" y2="1659.000000" stroke="red" style="stroke-width:2" /><text x="1406.000000" y="1682.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTCODE</text><text x="1582.000000" y="1682.000000" class="text fill-N2" style="text-anchor:start;font-size:20px" /><text x="1714.000000" y="1682.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1396.000000" x2="1724.000000" y1="1695.000000" y2="1695.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_CITIES"><g class="shape" ><rect x="1920.000000" y="872.000000" width="301.000000" height="216.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="1920.000000" y="872.000000" width="301.000000" height="36.000000" fill="red" class="class_header" /><text x="1930.000000" y="897.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_CITIES</text><text x="1930.000000" y="931.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_CITYCODE</text><text x="2079.000000" y="931.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2211.000000" y="931.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="1920.000000" x2="2221.000000" y1="944.000000" y2="944.000000" stroke="red" style="stroke-width:2" /><text x="1930.000000" y="967.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">CITYCODE</text><text x="2079.000000" y="967.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2211.000000" y="967.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1920.000000" x2="2221.000000" y1="980.000000" y2="980.000000" stroke="red" style="stroke-width:2" /><text x="1930.000000" y="1003.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="2079.000000" y="1003.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2211.000000" y="1003.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1920.000000" x2="2221.000000" y1="1016.000000" y2="1016.000000" stroke="red" style="stroke-width:2" /><text x="1930.000000" y="1039.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRPORTCODE</text><text x="2079.000000" y="1039.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2211.000000" y="1039.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1920.000000" x2="2221.000000" y1="1052.000000" y2="1052.000000" stroke="red" style="stroke-width:2" /><text x="1930.000000" y="1075.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="2079.000000" y="1075.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2211.000000" y="1075.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1920.000000" x2="2221.000000" y1="1088.000000" y2="1088.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_COUNTRIES"><g class="shape" ><rect x="2128.000000" y="373.000000" width="302.000000" height="108.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="2128.000000" y="373.000000" width="302.000000" height="36.000000" fill="red" class="class_header" /><text x="2138.000000" y="398.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_COUNTRIES</text><text x="2138.000000" y="432.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYCODE</text><text x="2288.000000" y="432.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2420.000000" y="432.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="2128.000000" x2="2430.000000" y1="445.000000" y2="445.000000" stroke="red" style="stroke-width:2" /><text x="2138.000000" y="468.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRYNAME</text><text x="2288.000000" y="468.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2420.000000" y="468.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="2128.000000" x2="2430.000000" y1="481.000000" y2="481.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_FLIGHT_SCHEDULES"><g class="shape" ><rect x="792.000000" y="1816.000000" width="386.000000" height="504.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="792.000000" y="1816.000000" width="386.000000" height="36.000000" fill="red" class="class_header" /><text x="802.000000" y="1841.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_FLIGHT_SCHEDULES</text><text x="802.000000" y="1875.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_FLIGHT_SCHEDULES</text><text x="1036.000000" y="1875.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1168.000000" y="1875.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="792.000000" x2="1178.000000" y1="1888.000000" y2="1888.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="1911.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">FLIGHTNUMBER</text><text x="1036.000000" y="1911.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1168.000000" y="1911.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="1924.000000" y2="1924.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="1947.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINEID</text><text x="1036.000000" y="1947.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="1947.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="1960.000000" y2="1960.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="1983.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">SERVICETYPE</text><text x="1036.000000" y="1983.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="1983.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="1996.000000" y2="1996.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2019.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTTYPE</text><text x="1036.000000" y="2019.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2019.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2032.000000" y2="2032.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2055.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTARRIVALTIMELT</text><text x="1036.000000" y="2055.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1168.000000" y="2055.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2068.000000" y2="2068.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2091.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTOWNER</text><text x="1036.000000" y="2091.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2091.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2104.000000" y2="2104.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2127.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DESTINATION</text><text x="1036.000000" y="2127.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2127.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2140.000000" y2="2140.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2163.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ORIGIN</text><text x="1036.000000" y="2163.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2163.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2176.000000" y2="2176.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2199.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAYSOFOPERATION</text><text x="1036.000000" y="2199.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1168.000000" y="2199.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2212.000000" y2="2212.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2235.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ENDATE</text><text x="1036.000000" y="2235.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2235.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2248.000000" y2="2248.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2271.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">STARTDATE</text><text x="1036.000000" y="2271.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1168.000000" y="2271.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2284.000000" y2="2284.000000" stroke="red" style="stroke-width:2" /><text x="802.000000" y="2307.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTCODE</text><text x="1036.000000" y="2307.000000" class="text fill-N2" style="text-anchor:start;font-size:20px" /><text x="1168.000000" y="2307.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="792.000000" x2="1178.000000" y1="2320.000000" y2="2320.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_LOCATIONTYPE"><g class="shape" ><rect x="1419.000000" y="926.000000" width="328.000000" height="108.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="1419.000000" y="926.000000" width="328.000000" height="36.000000" fill="red" class="class_header" /><text x="1429.000000" y="951.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_LOCATIONTYPE</text><text x="1429.000000" y="985.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_LOCATIONTYPE</text><text x="1605.000000" y="985.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1737.000000" y="985.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="1419.000000" x2="1747.000000" y1="998.000000" y2="998.000000" stroke="red" style="stroke-width:2" /><text x="1429.000000" y="1021.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LOCATIONTYPE</text><text x="1605.000000" y="1021.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1737.000000" y="1021.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1419.000000" x2="1747.000000" y1="1034.000000" y2="1034.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_3NF_SERVICETYPE"><g class="shape" ><rect x="961.000000" y="1461.000000" width="311.000000" height="108.000000" stroke="red" class="shape fill-N7" style="stroke-width:2;" /><rect x="961.000000" y="1461.000000" width="311.000000" height="36.000000" fill="red" class="class_header" /><text x="971.000000" y="1486.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_3NF_SERVICETYPE</text><text x="971.000000" y="1520.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_SERVICETYPE</text><text x="1130.000000" y="1520.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1262.000000" y="1520.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="961.000000" x2="1272.000000" y1="1533.000000" y2="1533.000000" stroke="red" style="stroke-width:2" /><text x="971.000000" y="1556.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">SERVICETYPE</text><text x="1130.000000" y="1556.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1262.000000" y="1556.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="961.000000" x2="1272.000000" y1="1569.000000" y2="1569.000000" stroke="red" style="stroke-width:2" /></g></g><g id="DST_DIM_AIRPORTS"><g class="shape" ><rect x="1456.000000" y="2639.000000" width="362.000000" height="360.000000" stroke="green" class="shape fill-N7" style="stroke-width:2;" /><rect x="1456.000000" y="2639.000000" width="362.000000" height="36.000000" fill="green" class="class_header" /><text x="1466.000000" y="2664.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_DIM_AIRPORTS</text><text x="1466.000000" y="2698.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_AIRPORTCODE</text><text x="1676.000000" y="2698.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1808.000000" y="2698.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="1456.000000" x2="1818.000000" y1="2711.000000" y2="2711.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2734.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRPORTCODE</text><text x="1676.000000" y="2734.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2734.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2747.000000" y2="2747.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2770.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">CITY_NAME</text><text x="1676.000000" y="2770.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2770.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2783.000000" y2="2783.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2806.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">COUNTRY_NAME</text><text x="1676.000000" y="2806.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2806.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2819.000000" y2="2819.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2842.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LOCATIONTYPE</text><text x="1676.000000" y="2842.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2842.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2855.000000" y2="2855.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2878.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">NAME</text><text x="1676.000000" y="2878.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2878.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2891.000000" y2="2891.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2914.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LATITUDE</text><text x="1676.000000" y="2914.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2914.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2927.000000" y2="2927.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2950.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">LONGITUDE</text><text x="1676.000000" y="2950.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1808.000000" y="2950.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2963.000000" y2="2963.000000" stroke="green" style="stroke-width:2" /><text x="1466.000000" y="2986.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_AIRPORTS</text><text x="1676.000000" y="2986.000000" class="text fill-N2" style="text-anchor:start;font-size:20px" /><text x="1808.000000" y="2986.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1456.000000" x2="1818.000000" y1="2999.000000" y2="2999.000000" stroke="green" style="stroke-width:2" /></g></g><g id="DST_DIM_FLIGHT_SCHEDULES"><g class="shape" ><rect x="778.000000" y="2603.000000" width="413.000000" height="432.000000" stroke="green" class="shape fill-N7" style="stroke-width:2;" /><rect x="778.000000" y="2603.000000" width="413.000000" height="36.000000" fill="green" class="class_header" /><text x="788.000000" y="2628.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_DIM_FLIGHT_SCHEDULES</text><text x="788.000000" y="2662.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_FLIGHT_SCHEDULES</text><text x="1049.000000" y="2662.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1181.000000" y="2662.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="778.000000" x2="1191.000000" y1="2675.000000" y2="2675.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2698.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">FLIGHTNUMBER</text><text x="1049.000000" y="2698.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1181.000000" y="2698.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2711.000000" y2="2711.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2734.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTTYPE</text><text x="1049.000000" y="2734.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2734.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2747.000000" y2="2747.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2770.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTOWNER</text><text x="1049.000000" y="2770.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2770.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2783.000000" y2="2783.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2806.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DESTINATION</text><text x="1049.000000" y="2806.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2806.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2819.000000" y2="2819.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2842.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ORIGIN</text><text x="1049.000000" y="2842.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2842.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2855.000000" y2="2855.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2878.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFT_NAME</text><text x="1049.000000" y="2878.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2878.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2891.000000" y2="2891.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2914.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRLINE_NAME</text><text x="1049.000000" y="2914.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2914.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2927.000000" y2="2927.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2950.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">SERVICETYPE</text><text x="1049.000000" y="2950.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2950.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2963.000000" y2="2963.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="2986.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ENDATE</text><text x="1049.000000" y="2986.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="2986.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="2999.000000" y2="2999.000000" stroke="green" style="stroke-width:2" /><text x="788.000000" y="3022.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">STARTDATE</text><text x="1049.000000" y="3022.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="1181.000000" y="3022.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="778.000000" x2="1191.000000" y1="3035.000000" y2="3035.000000" stroke="green" style="stroke-width:2" /></g></g><g id="DST_DIM_FACT_FLIGHT_SCHEDULES"><g class="shape" ><rect x="1407.000000" y="3318.000000" width="460.000000" height="252.000000" stroke="green" class="shape fill-N7" style="stroke-width:2;" /><rect x="1407.000000" y="3318.000000" width="460.000000" height="36.000000" fill="green" class="class_header" /><text x="1417.000000" y="3343.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_DIM_FACT_FLIGHT_SCHEDULES</text><text x="1417.000000" y="3377.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_FACT_FLIGHT_SCHEDULES</text><text x="1731.000000" y="3377.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3377.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px">PK</text><line x1="1407.000000" x2="1867.000000" y1="3390.000000" y2="3390.000000" stroke="green" style="stroke-width:2" /><text x="1417.000000" y="3413.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_AIRPORTS</text><text x="1731.000000" y="3413.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3413.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1407.000000" x2="1867.000000" y1="3426.000000" y2="3426.000000" stroke="green" style="stroke-width:2" /><text x="1417.000000" y="3449.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_FLIGHT_SCHEDULES</text><text x="1731.000000" y="3449.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3449.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1407.000000" x2="1867.000000" y1="3462.000000" y2="3462.000000" stroke="green" style="stroke-width:2" /><text x="1417.000000" y="3485.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_TIME</text><text x="1731.000000" y="3485.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3485.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1407.000000" x2="1867.000000" y1="3498.000000" y2="3498.000000" stroke="green" style="stroke-width:2" /><text x="1417.000000" y="3521.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">AIRCRAFTARRIVALTIMELT</text><text x="1731.000000" y="3521.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3521.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1407.000000" x2="1867.000000" y1="3534.000000" y2="3534.000000" stroke="green" style="stroke-width:2" /><text x="1417.000000" y="3557.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAYSOFOPERATION</text><text x="1731.000000" y="3557.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="1857.000000" y="3557.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1407.000000" x2="1867.000000" y1="3570.000000" y2="3570.000000" stroke="green" style="stroke-width:2" /></g></g><g id="DST_DIM_TIME"><g class="shape" ><rect x="1878.000000" y="2441.000000" width="402.000000" height="756.000000" stroke="green" class="shape fill-N7" style="stroke-width:2;" /><rect x="1878.000000" y="2441.000000" width="402.000000" height="36.000000" fill="green" class="class_header" /><text x="1888.000000" y="2466.750000" class="text fill-N7" style="text-anchor:start;font-size:24px">DST_DIM_TIME</text><text x="1888.000000" y="2500.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ID_DIM_TIME</text><text x="2181.000000" y="2500.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2500.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2513.000000" y2="2513.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2536.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DATE</text><text x="2181.000000" y="2536.000000" class="text fill-N2" style="text-anchor:start;font-size:20px" /><text x="2270.000000" y="2536.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2549.000000" y2="2549.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2572.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">YEAR</text><text x="2181.000000" y="2572.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2572.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2585.000000" y2="2585.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2608.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">MONTH</text><text x="2181.000000" y="2608.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2608.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2621.000000" y2="2621.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2644.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY</text><text x="2181.000000" y="2644.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2644.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2657.000000" y2="2657.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2680.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY_OF_WEEK</text><text x="2181.000000" y="2680.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2680.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2693.000000" y2="2693.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2716.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY_OF_YEAR</text><text x="2181.000000" y="2716.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2716.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2729.000000" y2="2729.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2752.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">QUARTER</text><text x="2181.000000" y="2752.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2752.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2765.000000" y2="2765.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2788.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">QUARTER_START_DAY_OF_YEAR</text><text x="2181.000000" y="2788.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2788.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2801.000000" y2="2801.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2824.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY_OF_QUARTER</text><text x="2181.000000" y="2824.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="2824.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2837.000000" y2="2837.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2860.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">MONTH_NAME</text><text x="2181.000000" y="2860.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2270.000000" y="2860.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2873.000000" y2="2873.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2896.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">MONTH_NAME_SHORT</text><text x="2181.000000" y="2896.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2270.000000" y="2896.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2909.000000" y2="2909.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2932.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY_NAME</text><text x="2181.000000" y="2932.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2270.000000" y="2932.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2945.000000" y2="2945.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="2968.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAY_NAME_SHORT</text><text x="2181.000000" y="2968.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">VARCHAR</text><text x="2270.000000" y="2968.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="2981.000000" y2="2981.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3004.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ISO_YEAR</text><text x="2181.000000" y="3004.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3004.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3017.000000" y2="3017.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3040.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ISO_WEEK</text><text x="2181.000000" y="3040.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3040.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3053.000000" y2="3053.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3076.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ISO_QUARTER</text><text x="2181.000000" y="3076.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3076.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3089.000000" y2="3089.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3112.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">ISO_DAY_OF_WEEK</text><text x="2181.000000" y="3112.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3112.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3125.000000" y2="3125.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3148.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAYS_IN_YEAR</text><text x="2181.000000" y="3148.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3148.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3161.000000" y2="3161.000000" stroke="green" style="stroke-width:2" /><text x="1888.000000" y="3184.000000" class="text fill-B2" style="text-anchor:start;font-size:20px">DAYS_REMAINING_IN_YEAR</text><text x="2181.000000" y="3184.000000" class="text fill-N2" style="text-anchor:start;font-size:20px">NUMBER</text><text x="2270.000000" y="3184.000000" class="text fill-AA2" style="text-anchor:end;font-size:20px" /><line x1="1878.000000" x2="2280.000000" y1="3197.000000" y2="3197.000000" stroke="green" style="stroke-width:2" /></g></g><g id="title"><g class="shape" ></g><g><foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" x="747.000000" y="-71.000000" width="935" height="51"><div xmlns="http://www.w3.org/1999/xhtml" class="md"><h1>'RAW DATA - 3NF DATA MODEL - SNOWFLAKE' DATA MODEL PIPELINE</h1>
+</div></foreignObject></g></g><g id="(DST_3NF_LOCATIONTYPE -&gt; DST_3NF_AIRPORTS)[0]"><marker id="mk-1368220775" markerWidth="19.000000" markerHeight="24.000000" refX="11.500000" refY="12.000000" viewBox="0.000000 0.000000 19.000000 24.000000" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0.000000,0.000000 19.000000,12.000000 0.000000,24.000000" class="connection fill-B1" stroke-width="5" /> </marker><path d="M 1582.750000 1037.000000 C 1582.750000 1226.300049 1581.550049 1286.699951 1577.582058 1327.040823" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1582.500000" y="1190.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_SERVICETYPE -&gt; DST_3NF_FLIGHT_SCHEDULES)[0]"><path d="M 1116.750000 1572.000000 C 1116.750000 1718.099976 1111.550049 1767.699951 1094.082841 1808.680654" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1116.500000" y="1700.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_COUNTRIES -&gt; DST_3NF_CITIES)[0]"><path d="M 2279.000000 484.000000 C 2279.000000 644.500000 2252.600098 722.900024 2151.901811 865.555776" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="2262.500000" y="698.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_CITIES -&gt; DST_3NF_AIRPORTS)[0]"><path d="M 2070.250000 1091.000000 C 2070.250000 1237.099976 2001.050049 1307.099976 1731.939447 1433.877515" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1974.500000" y="1325.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_AIRLINES -&gt; DST_3NF_FLIGHT_SCHEDULES)[0]"><path d="M 543.500000 1590.000000 C 543.500000 1721.699951 593.150024 1790.661987 784.813413 1926.401353" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="602.500000" y="1803.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_AIRCRAFTS -&gt; DST_3NF_FLIGHT_SCHEDULES)[0]"><path d="M 169.500000 1590.000000 C 169.500000 1721.699951 293.950012 1803.203003 783.813119 1990.976688" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="410.500000" y="1853.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_AIRPORTS -&gt; DST_3NF_FLIGHT_SCHEDULES)[0]"><path d="M 1392.939836 1670.261537 C 1320.300049 1737.974976 1276.699951 1779.900024 1183.559072 1871.538654" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1285.500000" y="1777.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_3NF_AIRPORTS -&gt; DST_3NF_FLIGHT_SCHEDULES)[1]"><path d="M 1494.360703 1697.809381 C 1478.699951 1743.300049 1415.099976 1793.300049 1184.671123 1939.936559" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1352.500000" y="1839.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_DIM_AIRPORTS -&gt; DST_DIM_FACT_FLIGHT_SCHEDULES)[0]"><path d="M 1636.500000 3002.000000 C 1636.500000 3205.699951 1636.500000 3269.699951 1636.500000 3310.000000" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1636.500000" y="3164.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_DIM_FLIGHT_SCHEDULES -&gt; DST_DIM_FACT_FLIGHT_SCHEDULES)[0]"><path d="M 984.750000 3038.000000 C 984.750000 3212.899902 1069.099976 3281.635986 1398.327995 3375.845637" fill="none" class="connection stroke-B1" style="stroke-width:5;" marker-end="url(#mk-1368220775)" mask="url(#d2-1501103601)" /><text x="1099.500000" y="3296.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_DIM_TIME -&gt; DST_DIM_FACT_FLIGHT_SCHEDULES)[0]"><marker id="mk-3488378134" markerWidth="10.000000" markerHeight="12.000000" refX="7.000000" refY="6.000000" viewBox="0.000000 0.000000 10.000000 12.000000" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0.000000,0.000000 10.000000,6.000000 0.000000,12.000000" class="connection fill-B1" stroke-width="2" /> </marker><path d="M 2078.500000 3198.500000 C 2078.500000 3245.300049 2036.099976 3275.300049 1870.188177 3344.951662" fill="none" class="connection stroke-B1" style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1997.500000" y="3297.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">1, N</text></g><g id="(DST_AIRCRAFTS -&gt; DST_3NF_AIRCRAFTS)[0]"><path d="M 169.500000 1071.500000 C 169.500000 1233.500000 169.500000 1308.300049 169.500000 1439.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="169.500000" y="1262.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_AIRLINES -&gt; DST_3NF_AIRLINES)[0]"><path d="M 543.500000 1071.500000 C 543.500000 1233.500000 543.500000 1308.300049 543.500000 1439.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="543.500000" y="1262.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_COUNTRIES -&gt; DST_3NF_COUNTRIES)[0]"><path d="M 2279.000000 109.500000 C 2279.000000 156.300003 2279.000000 209.500000 2279.000000 369.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="2279.500000" y="246.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_CITIES -&gt; DST_3NF_CITIES)[0]"><path d="M 1934.000000 572.500000 C 1934.000000 662.500000 1951.199951 722.900024 2018.328697 868.865891" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1953.500000" y="733.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_AIRPORTS -&gt; DST_3NF_AIRPORTS)[0]"><path d="M 1335.465801 626.339846 C 1315.449951 673.299988 1310.250000 744.400024 1310.250000 832.750000 C 1310.250000 921.099976 1327.300049 1290.951050 1392.621502 1353.979505" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1314.500000" y="1009.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_AIRPORTS -&gt; DST_3NF_LOCATIONTYPE)[0]"><path d="M 1546.787224 626.210019 C 1575.349976 673.299988 1582.750000 733.700012 1582.750000 922.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1582.500000" y="777.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_FLIGHT_SCHEDULES -&gt; DST_3NF_FLIGHT_SCHEDULES)[0]"><path d="M 865.333131 1215.456073 C 855.349976 1262.300049 852.750000 1322.599976 852.750000 1394.750000 C 852.750000 1466.900024 857.950012 1767.699951 877.181608 1812.820306" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="853.500000" y="1522.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_FLIGHT_SCHEDULES -&gt; DST_3NF_SERVICETYPE)[0]"><path d="M 1076.865672 1215.159902 C 1108.550049 1262.300049 1116.750000 1311.900024 1116.750000 1457.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1116.500000" y="1338.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">raw to 3NF data flow</text></g><g id="(DST_3NF_AIRPORTS -&gt; DST_DIM_AIRPORTS)[0]"><path d="M 1618.094765 1696.409517 C 1632.699951 1743.300049 1636.500000 1818.000000 1636.500000 1911.750000 C 1636.500000 2005.500000 1636.500000 2432.300049 1636.500000 2635.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="1636.500000" y="2171.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">3NF to Snowflake data flow</text></g><g id="(DST_3NF_FLIGHT_SCHEDULES -&gt; DST_DIM_FLIGHT_SCHEDULES)[0]"><path d="M 984.750000 2321.500000 C 984.750000 2368.300049 984.750000 2425.100098 984.750000 2599.500000" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-3488378134)" mask="url(#d2-1501103601)" /><text x="984.500000" y="2467.000000" class="text-italic fill-N2" style="text-anchor:middle;font-size:16px">3NF to Snowflake data flow</text></g><mask id="d2-1501103601" maskUnits="userSpaceOnUse" x="-101" y="-172" width="2632" height="3843">
+<rect x="-101" y="-172" width="2632" height="3843" fill="white"></rect>
+<rect x="747.000000" y="-71.000000" width="935" height="51" fill="rgba(0,0,0,0.75)"></rect>
+<rect x="1570.000000" y="1174.000000" width="25" height="21" fill="black"></rect>
+<rect x="1104.000000" y="1684.000000" width="25" height="21" fill="black"></rect>
+<rect x="2250.000000" y="682.000000" width="25" height="21" fill="black"></rect>
+<rect x="1962.000000" y="1309.000000" width="25" height="21" fill="black"></rect>
+<rect x="590.000000" y="1787.000000" width="25" height="21" fill="black"></rect>
+<rect x="398.000000" y="1837.000000" width="25" height="21" fill="black"></rect>
+<rect x="1273.000000" y="1761.000000" width="25" height="21" fill="black"></rect>
+<rect x="1340.000000" y="1823.000000" width="25" height="21" fill="black"></rect>
+<rect x="1624.000000" y="3148.000000" width="25" height="21" fill="black"></rect>
+<rect x="1087.000000" y="3280.000000" width="25" height="21" fill="black"></rect>
+<rect x="1985.000000" y="3281.000000" width="25" height="21" fill="black"></rect>
+<rect x="101.000000" y="1246.000000" width="137" height="21" fill="black"></rect>
+<rect x="475.000000" y="1246.000000" width="137" height="21" fill="black"></rect>
+<rect x="2211.000000" y="230.000000" width="137" height="21" fill="black"></rect>
+<rect x="1885.000000" y="717.000000" width="137" height="21" fill="black"></rect>
+<rect x="1246.000000" y="993.000000" width="137" height="21" fill="black"></rect>
+<rect x="1514.000000" y="761.000000" width="137" height="21" fill="black"></rect>
+<rect x="785.000000" y="1506.000000" width="137" height="21" fill="black"></rect>
+<rect x="1048.000000" y="1322.000000" width="137" height="21" fill="black"></rect>
+<rect x="1546.000000" y="2155.000000" width="181" height="21" fill="black"></rect>
+<rect x="894.000000" y="2451.000000" width="181" height="21" fill="black"></rect>
+</mask></svg></svg>

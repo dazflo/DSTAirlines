@@ -12,8 +12,6 @@ logs/*
 # Ignore files, at least for now
 files/*
 
-# Ignore generated .svg from d2
-data_modeling/*.svg
 sql_test
 config/sf_access.toml
 config/connections.toml
