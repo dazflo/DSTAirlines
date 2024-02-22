@@ -28,6 +28,32 @@ DST_3NF_AIRCRAFTS: {
     AICRAFTNAME: VARCHAR
 }
 
+# le nom/dela_timezone, l'offset par rapport à UTC
+DST_3NF_TIMEZONES {
+    shape: sql_table
+    style: {fill: red}
+    TIMEZONEID: VARCHAR {constraint: [primary_key]}
+    UTCOFFSET: VARCHAR
+}
+
+# Le code du pays et son nom
+DST_3NF_COUNTRIES: {
+    shape: sql_table
+    style: {fill: red}
+    COUNTRYCODE: VARCHAR {constraint: [primary_key]}
+    COUNTRYNAME: VARCHAR
+}
+
+# le code de la ville, le nom de la ville
+DST_3NF_CITIES: {
+    shape: sql_table
+    style: {fill: red}
+    CITYCODE: VARCHAR {constraint: [primary_key]}
+    CITYNAME: VARCHAR
+    COUNTRYCODE: VARCHAR {constraint: foreign_key}
+    TIMEZONEID: VARCHAR {constraint: foreign_key}
+}
+
 # Le code de l'aéroport, locationtype (rail, airport, ...) sans plus d'info, le nom de l'aéroport, sa latitude et longitude
 DST_3NF_AIRPORTS: {
     shape: sql_table
@@ -49,49 +75,6 @@ DST_3NF_AIRPORTS: {
 #     LOCATIONTYPENAME: VARCHAR
 # }
 
-# le code de la ville, le nom de la ville
-DST_3NF_CITIES: {
-    shape: sql_table
-    style: {fill: red}
-    CITYCODE: VARCHAR
-    CITYNAME: VARCHAR
-    COUNTRYCODE: VARCHAR {constraint: foreign_key}
-    TIMEZONEID: VARCHAR {constraint: foreign_key}
-}
-
-# le nom/dela_timezone, l'offset par rapport à UTC
-DST_3NF_TIMEZONES {
-    shape: sql_table
-    style: {fill: red}
-    TIMEZONEID: VARCHAR {constraint: [primary_key]}
-    UTCOFFSET: VARCHAR
-}
-
-# Le code du pays et son nom
-DST_3NF_COUNTRIES: {
-    shape: sql_table
-    style: {fill: red}
-    COUNTRYCODE: VARCHAR {constraint: [primary_key]}
-    COUNTRYNAME: VARCHAR
-}
-
-
-# DST_3NF_DATE: {
-#     shape: sql_table
-#     style: {fill: red}
-#     DATEUTC: TIMESTAMP {constraint: [primary_key]}
-#     DATELT: TIMESTAMP
-#     DAYNAME: VARCHAR
-#     DAYNUMBER: NUMBER
-# }
-
-# DST_3NF_TIME: {
-#     shape: sql_table
-#     style: {fill: red}
-#     TIMEID: NUMBER {constraint: [primary_key]}
-#     TIME: TIME
-# }
-
 # Code du type de service, description du service, application du service, contenu du service
 # ex: 'J', 'Normal Service', 'Scheduled', 'Passenger'
 DST_3NF_SERVICE_TYPES {
@@ -110,7 +93,7 @@ DST_3NF_SERVICE_TYPES {
 DST_3NF_FLIGHTS: {
     shape: sql_table
     style: {fill: red}
-    FLIGHTID:  {constraint: [primary_key]}
+    FLIGHTID: VARCHAR {constraint: [primary_key]}
     FLIGHTNUMBER: NUMBER
     SERVICETYPECODE: VARCHAR {constraint: foreign_key}
     AIRCRAFTCODE: VARCHAR {constraint: foreign_key}
@@ -126,11 +109,11 @@ DST_3NF_FLIGHTS: {
     ARRIVALACTUALDATETIMEUTC: DATETIME
     ARRIVALTIMESTATUSCODE: VARCHAR {constraint: foreign_key}
     # CONFIGURATIONVERSION: VARCHAR
- 
     OPERATINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
     OPERATINGCARRIERFLIGHTNUMBER: NUMBER
     MARKETINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
     MARKETINGCARRIERFLIGHTNUMBER: NUMBER
+    FLIGHTSTATUSCODE: VARCHAR {constraint: foreign_key}
 }
 
 # exemple: ('CD', 'Flight Cancelled')
@@ -139,6 +122,14 @@ DST_3NF_TIME_STATUS {
     style: {fill: red}
     TIMESTATUSCODE: VARCHAR {constraint: [primary_key]}
     TIMESTATUSDEFINITION: VARCHAR
+}
+
+
+DST_3NF_FLIGHT_STATUS {
+    shape: sql_table
+    style: {fill: red}
+    FLIGHTSTATUSCODE: VARCHAR {constraint: [primary_key]}
+    FLIGHTSTATUSDEFINITION: VARCHAR
 }
 
 # DST_3NF_GATES {
@@ -172,3 +163,4 @@ DST_3NF_AIRLINES.AIRLINEID <- DST_3NF_FLIGHTS.OPERATINGCARRIERAIRLINEID: 1,n
 DST_3NF_AIRLINES.AIRLINEID <- DST_3NF_FLIGHTS.MARKETINGCARRIERAIRLINEID: 1,n
 DST_3NF_AIRCRAFTS.AIRCRAFTCODE <- DST_3NF_FLIGHTS.AIRCRAFTCODE: 1,n
 DST_3NF_SERVICE_TYPES.SERVICETYPECODE <- DST_3NF_FLIGHTS.SERVICETYPECODE: 1,n
+DST_3NF_FLIGHT_STATUS.FLIGHTSTATUSCODE <- DST_3NF_FLIGHTS.FLIGHTSTATUSCODE: 1,n

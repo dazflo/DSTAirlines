@@ -1,0 +1,422 @@
+vars: {
+    d2-config: {
+        layout-engine: elk
+    }
+}
+
+title: |md
+  # RAW DATA FROM LH API
+| { near: top-center }
+
+
+DST_RAW_AIRCRAFTS: {
+    shape: sql_table
+    style: {fill: blue}
+    AIRCRAFTCODE: VARCHAR
+    AIRLINEEQUIPCODE: VARCHAR
+    AICRAFTNAME: VARCHAR
+}
+
+DST_RAW_AIRLINES: {
+    shape: sql_table
+    style: {fill: blue}
+    AIRLINEID: VARCHAR 
+    AIRLINENAME: VARCHAR
+    AIRLINEID_ICAO: VARCHAR
+}
+
+DST_RAW_AIRPORTS: {
+    shape: sql_table
+    style: {fill: blue}
+    AIRPORTCODE: VARCHAR 
+    CITYCODE: VARCHAR
+    COUNTRYCODE: VARCHAR
+    LOCATIONTYPE: VARCHAR
+    AIRPORTNAME: VARCHAR
+    LATITUDE: FLOAT
+    LONGITUDE: FLOAT
+    TIMEZONEID: VARCHAR
+    UTCOFFSET: VARCHAR
+}
+
+DST_RAW_CITIES: {
+    shape: sql_table
+    style: {fill: blue}
+    CITYCODE: VARCHAR
+    AIRPORTCODE: VARCHAR 
+    COUNTRYCODE: VARCHAR
+    CITYNAME: VARCHAR
+    TIMEZONEID: VARCHAR
+    UTCOFFSET: VARCHAR
+}
+
+DST_RAW_COUNTRIES: {
+    shape: sql_table
+    style: {fill: blue}
+    COUNTRYCODE: VARCHAR 
+    COUNTRYNAME: VARCHAR
+}	
+
+DST_RAW_FLIGHT_SCHEDULES: {
+    shape: sql_table
+    style: {fill: blue}
+    AIRLINEID: VARCHAR
+    FLIGHTNUMBER: NUMBER
+    DAYSOFOPERATION: NUMBER
+    STARTDATE: VARCHAR
+    ENDATE: VARCHAR
+    AIRCRAFTTYPE: VARCHAR
+    DEPARTUREAIRPORTCODE: VARCHAR
+    ARRIVALAIRPORTCODE: VARCHAR
+    SERVICETYPE: VARCHAR
+    AIRCRAFTDEPARTURETIMEUTC: NUMBER
+    AIRCRAFTARRIVALTIMEUTC: NUMBER
+    CONFIGURATIONVERSION: VARCHAR
+    AIRCRAFTOWNER: VARCHAR
+}
+
+DST_RAW_FLIGHT_STATUS: {
+    shape: sql_table
+    style: {fill: blue}
+    DEPARTUREAIRPORTCODE: VARCHAR 
+    DEPARTUREDATETIMEUTC: DATETIME
+    DEPARTURETIMESTATUSCODE: VARCHAR
+    DEPARTUEACTUALDATETIMEUTC: DATETIME
+    DEPARTURETERMINALNAME: VARCHAR
+    DEPARTURETERMINALGATE: VARCHAR
+    ARRIVALAIRPORTCODE: VARCHAR 
+    ARRIVALDATETIMEUTC: DATETIME
+    ARRIVALTIMESTATUSCODE: VARCHAR
+    ARRIVALTIMESTATUSDEFINITION: VARCHAR
+    ARRIVALACTUALDATETIMEUTC: DATETIME
+    ARRIVALTERMINALNAME: VARCHAR
+    ARRIVALTERMINALGATE: VARCHAR
+    SERVICETYPE: VARCHAR
+    OPERATINGCARRIERAIRLINEID: VARCHAR
+    OPERATINGCARRIERFLIGHTNUMBER: NUMBER
+    MARKETINGCARRIERAIRLINEID: VARCHAR
+    MARKETINGCARRIERFLIGHTNUMBER: NUMBER
+    AIRCRAFTCODE: VARCHAR
+    FLIGHTSTATUSCODE: VARCHAR
+    FLIGHTSTATUSDEFINITION: VARCHAR
+}		    
+
+###########################################################################################
+###################################### 3NF TABLES #########################################
+# l'ID de la compagnie et son nom
+DST_3NF_AIRLINES: {
+    shape: sql_table
+    style: {fill: red}
+    AIRLINEID: VARCHAR {constraint: [primary_key]}
+    AIRLINENAME: VARCHAR
+    AIRLINEID_ICAO: VARCHAR
+}
+
+# Le code de l'avion, le modèle
+# pas d'infos sur AIRLINEEQUIPCODE à part le code
+DST_3NF_AIRCRAFTS: {
+    shape: sql_table
+    style: {fill: red}
+    AIRCRAFTCODE: VARCHAR {constraint: [primary_key]}
+#    AIRLINEEQUIPCODE: VARCHAR
+    AICRAFTNAME: VARCHAR
+}
+
+# le nom/dela_timezone, l'offset par rapport à UTC
+DST_3NF_TIMEZONES {
+    shape: sql_table
+    style: {fill: red}
+    TIMEZONEID: VARCHAR {constraint: [primary_key]}
+    UTCOFFSET: VARCHAR
+}
+
+# Le code du pays et son nom
+DST_3NF_COUNTRIES: {
+    shape: sql_table
+    style: {fill: red}
+    COUNTRYCODE: VARCHAR {constraint: [primary_key]}
+    COUNTRYNAME: VARCHAR
+}
+
+# le code de la ville, le nom de la ville
+DST_3NF_CITIES: {
+    shape: sql_table
+    style: {fill: red}
+    CITYCODE: VARCHAR {constraint: [primary_key]}
+    CITYNAME: VARCHAR
+    COUNTRYCODE: VARCHAR {constraint: foreign_key}
+    TIMEZONEID: VARCHAR {constraint: foreign_key}
+}
+
+# Le code de l'aéroport, locationtype (rail, airport, ...) sans plus d'info, le nom de l'aéroport, sa latitude et longitude
+DST_3NF_AIRPORTS: {
+    shape: sql_table
+    style: {fill: red}
+    AIRPORTCODE: VARCHAR {constraint: [primary_key]}
+    CITYCODE: VARCHAR {constraint: foreign_key}
+    LOCATIONTYPE: VARCHAR
+    AIRPORTNAME: VARCHAR
+    LATITUDE: FLOAT
+    LONGITUDE: FLOAT
+}
+
+# useless because 1 value depends on airport pk
+# on n'a pas d'info
+# DST_3NF_LOCATIONTYPE: {
+#     shape: sql_table
+#     style: {fill: red}
+#     LOCATIONTYPEID: NUMBER {constraint: [primary_key]}
+#     LOCATIONTYPENAME: VARCHAR
+# }
+
+# Code du type de service, description du service, application du service, contenu du service
+# ex: 'J', 'Normal Service', 'Scheduled', 'Passenger'
+DST_3NF_SERVICE_TYPES {
+    shape: sql_table
+    style: {fill: red}
+    SERVICETYPECODE: VARCHAR {constraint: [primary_key]}
+    SERVICETYPEDESC: VARCHAR
+    SERVICETYPEAPP: VARCHAR
+    SERVICETYPECONTENT: VARCHAR
+}
+
+# Un vol
+# FLIGHTID: généré à partir de airlineid + FLIGHTNUMBER + DEPARTUREDATETIMEUTC
+# FLIGHTID	FLIGHTNUMBER	SERVICETYPECODE	AIRCRAFTCODE	AIRCRAFTOWNER	DEPARTUREAIRPORTCODE	DEPARTUREDATETIMEUTC	DEPARTURETIMESTATUSCODE	ARRIVALAIRPORTCODE	ARRIVALESTIMATEDDATETIMEUTC	ARRIVALTIMESTATUSCODE	ARRIVALDATETIMEUTC	OPERATINGCARRIERAIRLINEID	OPERATINGCARRIERFLIGHTNUMBER	MARKETINGCARRIERAIRLINEID	MARKETINGCARRIERFLIGHTNUMBER
+# WK62024-02-15 13:05:00.000	6	J	343	WK	ZRH	2024-02-15 13:05:00.000 +0000	DL	POP	2024-02-15 23:52:00.000 +0000	DL	2024-02-15 23:10:00.000 +0000	WK	006	WK	6
+DST_3NF_FLIGHTS: {
+    shape: sql_table
+    style: {fill: red}
+    FLIGHTID: VARCHAR {constraint: [primary_key]}
+    FLIGHTNUMBER: NUMBER
+    SERVICETYPECODE: VARCHAR {constraint: foreign_key}
+    AIRCRAFTCODE: VARCHAR {constraint: foreign_key}
+    AIRCRAFTOWNER: VARCHAR {constraint: foreign_key}
+    DEPARTUREAIRPORTCODE: VARCHAR {constraint: foreign_key}
+    # DEPARTURETERMINALGATE: VARCHAR {constraint: foreign_key}
+    DEPARTUREDATETIMEUTC: DATETIME
+    DEPARTUEACTUALDATETIMEUTC: DATETIME
+    DEPARTURETIMESTATUSCODE: VARCHAR {constraint: foreign_key}
+    # ARRIVALTERMINALGATE: VARCHAR {constraint: foreign_key}
+    ARRIVALAIRPORTCODE: VARCHAR {constraint: foreign_key}
+    ARRIVALDATETIMEUTC: DATETIME
+    ARRIVALACTUALDATETIMEUTC: DATETIME
+    ARRIVALTIMESTATUSCODE: VARCHAR {constraint: foreign_key}
+    # CONFIGURATIONVERSION: VARCHAR
+    OPERATINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
+    OPERATINGCARRIERFLIGHTNUMBER: NUMBER
+    MARKETINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
+    MARKETINGCARRIERFLIGHTNUMBER: NUMBER
+    FLIGHTSTATUSCODE: VARCHAR {constraint: foreign_key}
+}
+
+# exemple: ('CD', 'Flight Cancelled')
+DST_3NF_TIME_STATUS {
+    shape: sql_table
+    style: {fill: red}
+    TIMESTATUSCODE: VARCHAR {constraint: [primary_key]}
+    TIMESTATUSDEFINITION: VARCHAR
+}
+
+
+DST_3NF_FLIGHT_STATUS {
+    shape: sql_table
+    style: {fill: red}
+    FLIGHTSTATUSCODE: VARCHAR {constraint: [primary_key]}
+    FLIGHTSTATUSDEFINITION: VARCHAR
+}
+
+# DST_3NF_GATES {
+#     shape: sql_table
+#     style: {fill: red}
+#     TERMINALID: NUMBER {constraint: [primary_key]}
+#     TERMINALGATE: VARCHAR 
+#     TERMINALNAME: VARCHAR
+# }
+
+# DST_3NF_CONFIGURATION {
+#     shape: sql_table
+#     style: {fill: red}
+#     CONFIGURATIONVERSION: VARCHAR {constraint: [primary_key]}
+#     CONFIGURATIONDETAILS: VARCHAR
+# }
+
+################## RAW TO 3NF #######################################
+# direction: up
+DST_RAW_AIRCRAFTS --> DST_3NF_AIRCRAFTS : raw to 3NF data flow {style.animated:true}
+DST_RAW_AIRLINES --> DST_3NF_AIRLINES: raw to 3NF data flow {style.animated: true}
+DST_RAW_COUNTRIES --> DST_3NF_COUNTRIES: raw to 3NF data flow {style.animated: true}
+DST_RAW_CITIES --> DST_3NF_CITIES: raw to 3NF data flow {style.animated: true}
+DST_RAW_AIRPORTS --> DST_3NF_TIMEZONES: raw to 3NF data flow {style.animated: true}
+DST_RAW_AIRPORTS --> DST_3NF_AIRPORTS: raw to 3NF data flow {style.animated: true}
+DST_RAW_FLIGHT_SCHEDULES --> DST_3NF_FLIGHTS: raw to 3NF data flow {style.animated: true}
+DST_RAW_FLIGHT_STATUS --> DST_3NF_FLIGHTS: raw to 3NF data flow {style.animated: true}
+
+################## 3NF #######################################
+DST_3NF_CITIES.CITYCODE <- DST_3NF_AIRPORTS.CITYCODE: 1,n
+DST_3NF_TIMEZONES.TIMEZONEID <- DST_3NF_CITIES.TIMEZONEID: 1,n
+DST_3NF_COUNTRIES.COUNTRYCODE <- DST_3NF_CITIES.COUNTRYCODE: 1,n
+
+# DST_3NF_SERVICE.SERVICETYPEID -> DST_3NF_FLIGHTS.SERVICETYPEID
+DST_3NF_FLIGHTS.ARRIVALTIMESTATUSCODE -> DST_3NF_TIME_STATUS.TIMESTATUSCODE <- DST_3NF_FLIGHTS.ARRIVALTIMESTATUSCODE: 1,n
+# DST_3NF_FLIGHTS.DEPARTURETERMINALGATE <- DST_3NF_GATES.TERMINALID -> DST_3NF_FLIGHTS.ARRIVALETERMINALGATE
+# DST_3NF_DATE.DATEUTC -> DST_3NF_FLIGHTS.DEPARTUREDATETIMEUTC
+DST_3NF_AIRPORTS.AIRPORTCODE <- DST_3NF_FLIGHTS.DEPARTUREAIRPORTCODE: 1,n
+DST_3NF_AIRPORTS.AIRPORTCODE <- DST_3NF_FLIGHTS.ARRIVALAIRPORTCODE: 1,n
+DST_3NF_AIRLINES.AIRLINEID <- DST_3NF_FLIGHTS.OPERATINGCARRIERAIRLINEID: 1,n
+DST_3NF_AIRLINES.AIRLINEID <- DST_3NF_FLIGHTS.MARKETINGCARRIERAIRLINEID: 1,n
+DST_3NF_AIRCRAFTS.AIRCRAFTCODE <- DST_3NF_FLIGHTS.AIRCRAFTCODE: 1,n
+DST_3NF_SERVICE_TYPES.SERVICETYPECODE <- DST_3NF_FLIGHTS.SERVICETYPECODE: 1,n
+DST_3NF_FLIGHT_STATUS.FLIGHTSTATUSCODE <- DST_3NF_FLIGHTS.FLIGHTSTATUSCODE: 1,n
+
+
+
+###########################################################################################
+##################################### STAR TABLES #########################################
+DST_DIM_AIRLINES: {
+    shape: sql_table
+    style: {fill: green}
+    AIRLINEID: VARCHAR {constraint: [primary_key]}
+    AIRLINENAME: VARCHAR
+    AIRLINEID_ICAO: VARCHAR
+}
+
+DST_DIM_AIRCRAFTS: {
+    shape: sql_table
+    style: {fill: green}
+    AIRCRAFTCODE: VARCHAR  {constraint: [primary_key]}
+#    AIRLINEEQUIPCODE: VARCHAR
+    AICRAFTNAME: VARCHAR
+}
+
+DST_DIM_AIRPORTS: {
+    shape: sql_table
+    style: {fill: green}
+    AIRPORTCODE: VARCHAR {constraint: [primary_key]}
+    AIRPORTNAME: VARCHAR
+    LOCATIONTYPE: VARCHAR
+    CITYCODE: VARCHAR
+    CITYNAME: VARCHAR
+    TIMEZONEID: VARCHAR
+    UTCOFFSET: VARCHAR
+    COUNTRYCODE: VARCHAR
+    COUNTRYNAME: VARCHAR
+    LATITUDE: VARCHAR
+    LONGITUDE: VARCHAR
+}
+
+DST_FACT_FLIGHTS: {
+    shape: sql_table
+    style: {fill: green}
+    FLIGHTID:  {constraint: [primary_key]}
+    # FLIGHTNUMBER: NUMBER
+    SERVICETYPECODE: VARCHAR {constraint: foreign_key}
+    AIRCRAFTCODE: VARCHAR {constraint: foreign_key}
+    AIRCRAFTOWNER: VARCHAR {constraint: foreign_key}
+    DEPARTUREAIRPORTCODE: VARCHAR {constraint: foreign_key}
+    DEPARTURETIMESTATUSCODE: VARCHAR {constraint: foreign_key}
+    DEPARTUREDATEID: DATE {constraint: foreign_key}
+    DEPARTURETIMEGAP: NUMBER
+    # DEPARTURETERMINALGATE: VARCHAR {constraint: foreign_key}
+    # ARRIVALTERMINALGATE: VARCHAR {constraint: foreign_key}
+    ARRIVALAIRPORTCODE: VARCHAR {constraint: foreign_key}
+    ARRIVALTIMESTATUSCODE: VARCHAR {constraint: foreign_key}
+    ARRIVALDATEID: DATE {constraint: foreign_key}
+    ARRIVALTIMEGAP: NUMBER
+    TOTALTIMEDIFF: NUMBER
+    # CONFIGURATIONVERSION: VARCHAR
+    OPERATINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
+    # OPERATINGCARRIERFLIGHTNUMBER: NUMBER
+    MARKETINGCARRIERAIRLINEID: VARCHAR {constraint: foreign_key}
+    # MARKETINGCARRIERFLIGHTNUMBER: NUMBER
+    FLIGHTSTATUSCODE: VARCHAR {constraint: foreign_key}
+}
+
+DST_DIM_SERVICE_TYPES {
+    shape: sql_table
+    style: {fill: green}
+    SERVICETYPECODE: VARCHAR {constraint: [primary_key]}
+    SERVICETYPEDESC: VARCHAR
+    SERVICETYPEAPP: VARCHAR
+    SERVICETYPECONTENT: VARCHAR
+}
+
+
+DST_DIM_TIME_STATUS {
+    shape: sql_table
+    style: {fill: green}
+    TIMESTATUSCODE: VARCHAR {constraint: [primary_key]}
+    TIMESTATUSDEFINITION: VARCHAR
+}
+
+DST_DIM_DATE {
+    shape: sql_table
+    style: {fill: green}
+    DATEID: VARCHAR {constraint: [primary_key]}
+    DATEFULL: DATE
+    DATEYEAR: NUMBER
+    DATEMONTH: VARCHAR
+    DATEWEEK: NUMBER
+    DATEDAY: VARCHAR
+}
+
+DST_DIM_FLIGHT_STATUS {
+    shape: sql_table
+    style: {fill: green}
+    FLIGHTSTATUSCODE: VARCHAR {constraint: [primary_key]}
+    FLIGHTSTATUSDEFINITION: VARCHAR
+}
+
+
+################## STAR MODEL#######################################
+DST_FACT_FLIGHTS.DEPARTUREDATEID -> DST_DIM_DATE.DATEID: 1,n
+DST_FACT_FLIGHTS.ARRIVALDATEID -> DST_DIM_DATE.DATEID: 1,n
+DST_FACT_FLIGHTS.DEPARTUREAIRPORTCODE -> DST_DIM_AIRPORTS.AIRPORTCODE: 1,n
+DST_FACT_FLIGHTS.ARRIVALAIRPORTCODE -> DST_DIM_AIRPORTS.AIRPORTCODE: 1,n
+DST_FACT_FLIGHTS.AIRCRAFTCODE -> DST_DIM_AIRCRAFTS.AIRCRAFTCODE: 1,n
+DST_FACT_FLIGHTS.SERVICETYPECODE -> DST_DIM_SERVICE_TYPES.SERVICETYPECODE: 1,n
+DST_FACT_FLIGHTS.DEPARTURETIMESTATUSCODE -> DST_DIM_TIME_STATUS.TIMESTATUSCODE: 1,n
+DST_FACT_FLIGHTS.ARRIVALTIMESTATUSCODE -> DST_DIM_TIME_STATUS.TIMESTATUSCODE: 1,n
+DST_FACT_FLIGHTS.FLIGHTSTATUSCODE -> DST_DIM_FLIGHT_STATUS.FLIGHTSTATUSCODE: 1,n
+DST_FACT_FLIGHTS.OPERATINGCARRIERAIRLINEID -> DST_DIM_AIRLINES.AIRLINEID: 1,n
+DST_FACT_FLIGHTS.MARKETINGCARRIERAIRLINEID -> DST_DIM_AIRLINES.AIRLINEID: 1,n
+
+################## 3NF TO STAR #######################################
+
+DST_3NF_AIRPORTS -> DST_DIM_AIRPORTS {
+    style: {  
+        animated: true
+        opacity: 0.4
+        
+    }
+}
+DST_3NF_AIRCRAFTS -> DST_DIM_AIRCRAFTS {
+    style: {  
+        animated: true
+        opacity: 0.4
+    }
+}
+DST_3NF_FLIGHT_STATUS -> DST_DIM_FLIGHT_STATUS {
+    style: {  
+        animated: true
+        opacity: 0.4
+    }
+}
+DST_3NF_AIRLINES -> DST_DIM_AIRLINES {
+    style: {  
+        animated: true
+        opacity: 0.4
+    }
+}
+DST_3NF_SERVICE_TYPES -> DST_DIM_SERVICE_TYPES {
+    style: {  
+        animated: true
+        opacity: 0.4
+    }
+}
+DST_3NF_TIME_STATUS -> DST_DIM_TIME_STATUS {
+    style: {  
+        animated: true
+        opacity: 0.4
+    }
+}

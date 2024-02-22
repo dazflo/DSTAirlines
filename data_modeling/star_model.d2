@@ -28,7 +28,6 @@ DST_DIM_AIRCRAFTS: {
     AICRAFTNAME: VARCHAR
 }
 
-
 DST_DIM_AIRPORTS: {
     shape: sql_table
     style: {fill: green}
@@ -49,7 +48,7 @@ DST_FACT_FLIGHTS: {
     shape: sql_table
     style: {fill: green}
     FLIGHTID:  {constraint: [primary_key]}
-    FLIGHTNUMBER: NUMBER
+    # FLIGHTNUMBER: NUMBER
     SERVICETYPECODE: VARCHAR {constraint: foreign_key}
     AIRCRAFTCODE: VARCHAR {constraint: foreign_key}
     AIRCRAFTOWNER: VARCHAR {constraint: foreign_key}
